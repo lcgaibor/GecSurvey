@@ -21,8 +21,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegistrarUsuario extends AppCompatActivity {
-    EditText txtUsuario, txtContrasenia;
-    Button btnRegresar, btnRegistrar;
+    EditText usuarioR, nombreR, apellidoR, contraseniaR;
+    Button btnRegistrar;
     private String IP;
 
     @Override
@@ -30,46 +30,38 @@ public class RegistrarUsuario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registrar_usuario);
 
+        usuarioR = findViewById(R.id.usuarioR);
+        nombreR = findViewById(R.id.nombreR);
+        apellidoR = findViewById(R.id.apellidoR);
+        contraseniaR = findViewById(R.id.contraseniaR);
 
-        txtUsuario = findViewById(R.id.usuarioR);
-        txtContrasenia = findViewById(R.id.contraseniaR);
-
-        btnRegresar = findViewById(R.id.regresar);
-        btnRegistrar = findViewById(R.id.registroR);
+        btnRegistrar = findViewById(R.id.btnRegistrar);
 
         IP = getString(R.string.ip_serv);
 
-        ConnectivityManager cm =
-                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String usuario = txtUsuario.getText().toString();
-                String contrasenia = txtContrasenia.getText().toString();
+                String usuario = usuarioR.getText().toString();
+                String nombre = nombreR.getText().toString();
+                String apellido = apellidoR.getText().toString();
+                String contrasenia = contraseniaR.getText().toString();
                 Toast.makeText(getApplicationContext(),usuario, Toast.LENGTH_SHORT);
-                registrarUsuario(usuario, contrasenia);
-            }
-        });
-
-        btnRegresar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(RegistrarUsuario.this, Login.class);
-                startActivity(intent);
+                registrarUsuario(usuario, nombre, apellido, contrasenia);
             }
         });
     }
 
-    private void registrarUsuario(String usuario, String contrasenia){
+    private void registrarUsuario(String usuario, String nombre, String apellido, String contrasenia){
         StringRequest stringRequest = new StringRequest(Request.Method.POST, IP+"/login/signup",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         if (!response.isEmpty()){
                             Toast.makeText(getApplicationContext(),"Registro correcto", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(RegistrarUsuario.this, Login.class);
+                            Intent intent = new Intent(RegistrarUsuario.this, Inicio.class);
                             startActivity(intent);
                         } else {
                             Toast.makeText(getApplicationContext(),"Registro incorrecto", Toast.LENGTH_SHORT).show();
@@ -86,6 +78,8 @@ public class RegistrarUsuario extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 params.put("usuario", usuario);
+                params.put("nombre",nombre);
+                params.put("apellido", apellido);
                 params.put("contrasenia", contrasenia);
 
                 return params;

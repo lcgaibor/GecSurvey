@@ -44,8 +44,8 @@ public class Login extends AppCompatActivity {
         txtUsuario = findViewById(R.id.usuario);
         txtContrasenia = findViewById(R.id.contrasenia);
 
-        btnIngresar = findViewById(R.id.ingresar);
-        btnRegistrar = findViewById(R.id.registro);
+        btnIngresar = findViewById(R.id.btnIngresar);
+        //btnRegistrar = findViewById(R.id.registro);
 
         IP = getString(R.string.ip_serv);
 
@@ -62,13 +62,13 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+        /*btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Login.this, RegistrarUsuario.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 
     private void validarSesion(){
