@@ -22,8 +22,8 @@
         android:layout_width="79dp"
         android:layout_height="64dp"
         app:srcCompat="@drawable/baseline_home_24"
-        tools:layout_editor_absoluteX="174dp"
-        tools:layout_editor_absoluteY="157dp" />
+        tools:layout_editor_absoluteX="182dp"
+        tools:layout_editor_absoluteY="123dp" />
 
     <ImageButton
         android:id="@+id/btnUsuario"
@@ -32,24 +32,11 @@
         android:layout_marginStart="34dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="66dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/colorverde"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnEncuestar"
         app:layout_constraintTop_toBottomOf="@+id/imageView15"
         app:srcCompat="@drawable/baseline_person_24" />
-
-    <ImageButton
-        android:id="@+id/btnInformacion"
-        android:layout_width="120dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="34dp"
-        android:backgroundTint="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/btnCerrarSesion"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEncuestar"
-        app:srcCompat="@drawable/baseline_info_24" />
 
     <ImageButton
         android:id="@+id/btnEncuestar"
@@ -58,7 +45,7 @@
         android:layout_marginStart="71dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/colorverde"
         app:layout_constraintEnd_toStartOf="@+id/btnUsuario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView15"
@@ -69,14 +56,47 @@
         android:layout_width="120dp"
         android:layout_height="110dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="66dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/colorverde"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/btnInformacion"
         app:layout_constraintTop_toBottomOf="@+id/btnUsuario"
         app:srcCompat="@drawable/baseline_exit_to_app_24" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Salir"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_editor_absoluteX="274dp"
+        tools:layout_editor_absoluteY="547dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Acerca de"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="547dp" />
+
+    <ImageButton
+        android:id="@+id/btnInformacion"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="34dp"
+        android:backgroundTint="@color/colorverde"
+        app:layout_constraintEnd_toStartOf="@+id/btnCerrarSesion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEncuestar"
+        app:srcCompat="@drawable/baseline_info_24" />
 
     <ImageView
         android:id="@+id/imageView13"
@@ -87,5 +107,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/p2" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Perfil"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_editor_absoluteX="274dp"
+        tools:layout_editor_absoluteY="373dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Encuesta"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="373dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
