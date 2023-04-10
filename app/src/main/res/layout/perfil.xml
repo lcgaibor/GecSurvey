@@ -16,20 +16,8 @@
         android:inputType="textPersonName"
         android:text="Nombre"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteX="65dp"
         tools:layout_editor_absoluteY="204dp" />
-
-    <EditText
-        android:id="@+id/apellidoR2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="@font/quicksand_bold"
-        android:inputType="textPersonName"
-        android:text="Apellido"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="41dp"
-        tools:layout_editor_absoluteY="258dp" />
 
     <EditText
         android:id="@+id/usuarioR2"
@@ -40,8 +28,28 @@
         android:inputType="textEmailAddress"
         android:text="Correo"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteX="65dp"
         tools:layout_editor_absoluteY="321dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/baseline_perm_identity_24"
+        tools:layout_editor_absoluteX="179dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <EditText
+        android:id="@+id/apellidoR2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/quicksand_bold"
+        android:inputType="textPersonName"
+        android:text="Apellido"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="258dp" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -64,21 +72,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/p2" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/baseline_perm_identity_24"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="125dp" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="262dp"
         android:layout_height="122dp"
         android:background="#299916"
         android:backgroundTint="#299916"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="467dp">
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="546dp">
 
         <TextView
             android:id="@+id/textView18"
@@ -88,8 +88,8 @@
             android:text="Número de encuestas"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/design_default_color_on_secondary"
-            tools:layout_editor_absoluteX="38dp"
-            tools:layout_editor_absoluteY="16dp" />
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="19dp" />
 
         <TextView
             android:id="@+id/textView19"
@@ -98,8 +98,8 @@
             android:fontFamily="@font/quicksand_bold"
             android:text="0"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:layout_editor_absoluteX="124dp"
-            tools:layout_editor_absoluteY="59dp" />
+            tools:layout_editor_absoluteX="115dp"
+            tools:layout_editor_absoluteY="66dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

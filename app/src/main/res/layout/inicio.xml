@@ -4,46 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:foregroundTint="#FFFFFF"
+    android:background="#FFFFFF"
+    android:backgroundTint="@color/verde4"
+    android:foregroundTint="@color/verde4"
     tools:context=".Inicio">
 
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#299916"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="SE Survey"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="30dp" />
+
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="414dp"
-        android:layout_height="332dp"
-        android:layout_marginTop="150dp"
+        android:id="@+id/imageView10"
+        android:layout_width="409dp"
+        android:layout_height="402dp"
+        android:layout_marginTop="212dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/download_removebg_preview" />
+        app:srcCompat="@drawable/customer_survey_rafiki" />
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="105dp"
-        android:layout_marginEnd="120dp"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/button_border"
         android:backgroundTint="@color/colorverde"
         android:fontFamily="@font/quicksand_bold"
         android:text="Iniciar sesión"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        tools:layout_editor_absoluteY="700dp" />
 
     <Button
         android:id="@+id/btnRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="120dp"
-        android:backgroundTint="@color/colorverde"
+        android:layout_width="210dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/button_border"
+        android:backgroundTint="@color/black"
         android:fontFamily="@font/quicksand_bold"
         android:text="Crear cuenta"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
