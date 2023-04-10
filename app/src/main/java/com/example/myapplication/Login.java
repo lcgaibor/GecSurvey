@@ -31,7 +31,7 @@ import java.util.Map;
 
 public class Login extends AppCompatActivity {
     EditText txtUsuario, txtContrasenia;
-    Button btnIngresar, btnRegistrar;
+    Button btnIngresar;
 
     private String IP;
     @Override
@@ -77,8 +77,8 @@ public class Login extends AppCompatActivity {
         if(sesion){
             Intent intent = new Intent(Login.this, MenuApp.class);
             startActivity(intent);
+            finish();
         }
-
     }
 
     private void validarUsuario(String usuario, String contrasenia){
