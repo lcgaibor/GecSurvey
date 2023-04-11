@@ -12,9 +12,10 @@
         android:id="@+id/imageView8"
         android:layout_width="413dp"
         android:layout_height="261dp"
-        app:srcCompat="@drawable/add_user"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="-2dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add_user" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
