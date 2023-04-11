@@ -31,74 +31,102 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="70dp"
             android:backgroundTint="#299916"
             android:fontFamily="@font/quicksand_bold"
             android:text="Crear Cuenta"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColor="@color/colorverde"
-            tools:layout_editor_absoluteX="38dp"
-            tools:layout_editor_absoluteY="40dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/contraseniaR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
             android:ems="10"
             android:fontFamily="@font/quicksand_bold"
             android:inputType="textPassword"
             android:text="Contraseña"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:layout_editor_absoluteX="38dp"
-            tools:layout_editor_absoluteY="309dp" />
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/apellidoR" />
 
         <EditText
             android:id="@+id/nombreR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
             android:ems="10"
             android:fontFamily="@font/quicksand_bold"
             android:inputType="textPersonName"
             android:text="Nombre"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:layout_editor_absoluteX="38dp"
-            tools:layout_editor_absoluteY="168dp" />
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usuarioR" />
 
         <EditText
             android:id="@+id/apellidoR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
             android:ems="10"
             android:fontFamily="@font/quicksand_bold"
             android:inputType="textPersonName"
             android:text="Apellido"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:layout_editor_absoluteX="38dp"
-            tools:layout_editor_absoluteY="239dp" />
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nombreR" />
 
         <EditText
             android:id="@+id/usuarioR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
             android:ems="10"
             android:fontFamily="@font/quicksand_bold"
             android:inputType="textEmailAddress"
             android:text="Correo"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:layout_editor_absoluteX="38dp"
-            tools:layout_editor_absoluteY="98dp" />
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
         <Button
             android:id="@+id/btnRegistrar"
             android:layout_width="210dp"
             android:layout_height="55dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="79dp"
             android:background="@drawable/button_border"
             android:backgroundTint="#299916"
             android:fontFamily="@font/quicksand_bold"
             android:text="Registrar"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#FFFFFF"
-            tools:layout_editor_absoluteX="77dp"
-            tools:layout_editor_absoluteY="409dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contraseniaR" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
