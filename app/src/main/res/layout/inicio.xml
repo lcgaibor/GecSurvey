@@ -24,7 +24,7 @@
             android:id="@+id/imageView7"
             android:layout_width="match_parent"
             android:layout_height="446dp"
-            app:srcCompat="@drawable/customer_survey_rafiki" />
+            app:srcCompat="@drawable/img_inicio" />
 
         <TextView
             android:id="@+id/textView14"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/quicksand_bold"
-            android:text="SE Survey"
+            android:text="SE SURVEY"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColor="@color/colorverde"
             android:textSize="40sp"
