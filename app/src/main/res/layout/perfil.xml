@@ -103,7 +103,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/taking_notes_pana" />
+                app:srcCompat="@drawable/img_perfil" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
