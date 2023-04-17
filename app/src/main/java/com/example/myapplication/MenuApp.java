@@ -7,12 +7,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MenuApp extends AppCompatActivity {
 
-    ImageButton btnEncuestar, btnUsuario, btnInformacion, btnCerrarSesion;
+    ImageButton btnEncuestar, btnPerfil, btnInformacion, btnCerrarSesion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +19,7 @@ public class MenuApp extends AppCompatActivity {
         setContentView(R.layout.menu_app);
 
         btnEncuestar = findViewById(R.id.btnEncuestar);
-        btnUsuario = findViewById(R.id.btnUsuario);
+        btnPerfil = findViewById(R.id.btnPerfil);
         btnInformacion = findViewById(R.id.btnInformacion);
         btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
 
@@ -32,15 +31,19 @@ public class MenuApp extends AppCompatActivity {
             }
         });
 
-        btnUsuario.setOnClickListener(new View.OnClickListener() {
+        btnPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(MenuApp.this, Perfil.class);
+                startActivity(intent);
             }
         });
 
         btnInformacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(MenuApp.this, Informacion.class);
+                startActivity(intent);
             }
         });
 
