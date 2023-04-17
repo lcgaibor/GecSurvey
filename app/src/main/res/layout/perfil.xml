@@ -119,7 +119,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView49"
+                android:id="@+id/textView549"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -142,7 +142,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView45"
+                android:id="@+id/textView545"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -151,7 +151,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView49"
+                android:id="@+id/textView449"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -174,7 +174,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView45"
+                android:id="@+id/textView445"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -196,7 +196,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button554"
         android:layout_width="349dp"
         android:layout_height="65dp"
         android:layout_marginStart="30dp"

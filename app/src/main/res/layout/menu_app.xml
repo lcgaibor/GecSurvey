@@ -62,7 +62,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
-        android:id="@+id/btnUsuario"
+        android:id="@+id/btnPerfil"
         android:layout_width="120dp"
         android:layout_height="110dp"
         android:layout_marginStart="25dp"
@@ -86,7 +86,7 @@
         android:background="@drawable/button_border"
         android:backgroundTint="@color/colorverde"
         android:elevation="15dp"
-        app:layout_constraintEnd_toStartOf="@+id/btnUsuario"
+        app:layout_constraintEnd_toStartOf="@+id/btnPerfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
         app:srcCompat="@drawable/img_btn_list" />
@@ -173,8 +173,8 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/btnUsuario"
-        app:layout_constraintStart_toStartOf="@+id/btnUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/btnUsuario" />
+        app:layout_constraintEnd_toEndOf="@+id/btnPerfil"
+        app:layout_constraintStart_toStartOf="@+id/btnPerfil"
+        app:layout_constraintTop_toBottomOf="@+id/btnPerfil" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
