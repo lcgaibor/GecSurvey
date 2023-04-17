@@ -4,1810 +4,531 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#F1F3F1"
     tools:context=".Encuesta">
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="740dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView24"
-                android:layout_width="191dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="177dp"
-                android:gravity="center"
-                android:text="Encuesta"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="40dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="58dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Has tenido que llamar al número de emergencia 911? "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.421"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-            <RadioButton
-                android:id="@+id/radioButton29"
-                android:layout_width="77dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-            <RadioButton
-                android:id="@+id/radioButton30"
-                android:layout_width="77dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="173dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton13" />
-
-            <TextView
-                android:id="@+id/textViewp2"
-                android:layout_width="match_parent"
-                android:layout_height="93dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="Si has llamado al 911, ¿puedes describir la situación por la que llamaste? Fue un/a:"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.457"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton14" />
-
-            <RadioButton
-                android:id="@+id/radioButton31"
-                android:layout_width="218dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="123dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="124dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Emergencia médica"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-            <RadioButton
-                android:id="@+id/radioButton32"
-                android:layout_width="268dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="96dp"
-                android:layout_marginEnd="97dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Incendio o desastre natural"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton19" />
-
-            <RadioButton
-                android:id="@+id/radioButton33"
-                android:layout_width="99dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="171dp"
-                android:layout_marginEnd="172dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Robo"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton15" />
-
-            <RadioButton
-                android:id="@+id/radioButton34"
-                android:layout_width="241dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginEnd="117dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Accidentes de tránsito"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton16" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="70dp"
-                android:ems="10"
-                android:fontFamily="@font/quicksand_bold"
-                android:inputType="textPersonName"
-                android:text="Otros..."
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.565"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton20" />
-
-            <TextView
-                android:id="@+id/textViewp3"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Te pidieron los operadores del 911 información específica? "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-
-            <RadioButton
-                android:id="@+id/radioButton27"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton" />
-
-            <RadioButton
-                android:id="@+id/radioButton28"
-                android:layout_width="87dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-            <TextView
-                android:id="@+id/textViewp4"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Te sentiste seguro al proporcionar tu información al operador del 911?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
-
-            <RadioButton
-                android:id="@+id/radioButton23"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-            <RadioButton
-                android:id="@+id/radioButton24"
-                android:layout_width="102dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="168dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton6" />
-
-            <TextView
-                android:id="@+id/textViewp5"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿El tiempo de respuesta de los servicios de emergencia fue adecuado?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton5" />
-
-            <RadioButton
-                android:id="@+id/radioButton22"
-                android:layout_width="92dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="179dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-            <RadioButton
-                android:id="@+id/radioButton21"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="168dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton7" />
-
-            <TextView
-                android:id="@+id/textViewp6"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Los servicios de emergencia que llegaron al lugar de la emergencia fueron útiles y efectivos?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton26"
-                android:layout_width="89dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton25"
-                android:layout_width="117dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textViewp7"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Crees que los servicios de emergencia son lo suficientemente accesibles en tu sector?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton35"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton36"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textViewp8"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Crees que los conductores en tu zona respetan las reglas de tránsito?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton37"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton38"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textViewp9"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Recomendarías a otros que llamen al 911 en caso de una emergencia?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton39"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton40"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textViewp10"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Ha presenciado un robo en su sector?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton41"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton42"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Con qué frecuencia usted ha presenciado un robo en su sector?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton43"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Nunca"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton44"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Uno"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <RadioButton
-                android:id="@+id/radioButton53"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Dos"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <RadioButton
-                android:id="@+id/radioButton54"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Tres o más"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿En qué momento del día se produjo el robo?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton45"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Mañana"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton46"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Tarde"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <RadioButton
-                android:id="@+id/radioButton55"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Noche"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Qué tipo de objeto(s) fue robado en tu presencia?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton47"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Teléfonos"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton48"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Cartera"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <RadioButton
-                android:id="@+id/radioButton56"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Joyas"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="70dp"
-                android:ems="10"
-                android:fontFamily="@font/quicksand_bold"
-                android:inputType="textPersonName"
-                android:text="Otros..."
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.565"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton20" />
-
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Con qué objeto(s) ha observado que suelen utilizar los ladrones al realizar un robo?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton49"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Arma Blanca"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton50"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Pistola"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="70dp"
-                android:ems="10"
-                android:fontFamily="@font/quicksand_bold"
-                android:inputType="textPersonName"
-                android:text="Otros..."
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.565"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton20" />
-
-            <TextView
-                android:id="@+id/textView25"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Ha sufrido usted un robo en los últimos 12 meses en su sector?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton51"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton52"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Cuántas veces ha sido víctima de un robo en los últimos 2 años en su sector?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton67"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Nunca"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton68"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Uno"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <RadioButton
-                android:id="@+id/radioButton69"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Dos"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <RadioButton
-                android:id="@+id/radioButton70"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Tres o más"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Crees que la policía o las autoridades locales están tomando suficientes medidas para prevenir robos en la zona?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton59"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton60"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Cómo describirías el nivel de seguridad en tu sector en cuanto a robos, siendo 5 el más alto y 1 el más bajo?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton61"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton71"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton72"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="3"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton73"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="4"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton62"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="5"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Has contactado a los servicios de emergencia en caso de un robo?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton63"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton64"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Recibió el servicio por parte de los servicios de emergencia?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton65"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton66"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView32"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Recibió el servicio por parte de los servicios de emergencia?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton90"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="1"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton91"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="2"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton92"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="3"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton93"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="4"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton94"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="5"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView33"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Has estado involucrado en un accidente de tránsito en los últimos 12 meses?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton78"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton79"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView34"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="Si has estado involucrado en un accidente de tránsito, ¿fue como conductor, pasajero, ciclista o peatón?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton80"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Conductor"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton81"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Pasajero"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <RadioButton
-                android:id="@+id/radioButton95"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Peatón"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <RadioButton
-                android:id="@+id/radioButton96"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Ciclista"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView35"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Dónde ocurrió el accidente? Fue en un/a:"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton82"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Carretera principal"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton83"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Intersección"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <RadioButton
-                android:id="@+id/radioButton97"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Calle"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="70dp"
-                android:ems="10"
-                android:fontFamily="@font/quicksand_bold"
-                android:inputType="textPersonName"
-                android:text="Otros..."
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.565"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton20" />
-
-            <TextView
-                android:id="@+id/textView36"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Qué tipo de vehículo(s) estuvieron involucrados en el accidente?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton84"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Trailer"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton85"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Motocicleta"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <RadioButton
-                android:id="@+id/radioButton98"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Automóvil"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="70dp"
-                android:ems="10"
-                android:fontFamily="@font/quicksand_bold"
-                android:inputType="textPersonName"
-                android:text="Otros..."
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.565"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton20" />
-
-            <TextView
-                android:id="@+id/textView37"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿El accidente resultó en lesiones físicas?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton86"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton87"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView38"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Recibiste atención médica después del accidente?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton88"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton89"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView39"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Alguna vez has presenciado un accidente de tránsito?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton100"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton101"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView40"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Crees que la señalización en las carreteras y calles es adecuada?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton102"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton103"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView41"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Crees que la educación vial es suficiente para prevenir accidentes de tránsito?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton104"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton105"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView42"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Crees que las autoridades locales están tomando suficientes medidas para prevenir accidentes de tránsito?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton106"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton107"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
-
-            <TextView
-                android:id="@+id/textView43"
-                android:layout_width="match_parent"
-                android:layout_height="69dp"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:gravity="center"
-                android:text="¿Crees que la educación vial es suficiente para prevenir accidentes de tránsito?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-            <RadioButton
-                android:id="@+id/radioButton108"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="180dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="Sí"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <RadioButton
-                android:id="@+id/radioButton109"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginEnd="169dp"
-                android:fontFamily="@font/quicksand_bold"
-                android:text="No"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:visibility="visible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="130sp"
+                android:background="@drawable/text_bord_perfil"
+                android:elevation="30dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="130dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="ENCUESTA"
+                    android:textColor="@color/colorverde"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_bord_cont_perfil"
+                android:elevation="20dp"
+                android:padding="10sp"
+                tools:layout_margin="18sp">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="Datos Personales"
+                    android:textColor="@color/colorverde"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Nombres Completos"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="65dp" />
+
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:text="Teléfono"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="259dp" />
+
+                <EditText
+                    android:id="@+id/editTextNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:text="Cédula"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="123dp" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Dirección"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="191dp" />
+
+                <EditText
+                    android:id="@+id/editTextDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:text="Fecha de Nacimiento"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="326dp" />
+
+                <EditText
+                    android:id="@+id/editTextTextEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:text="Correo"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="394dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_bord_cont_perfil"
+                android:elevation="20dp"
+                android:padding="10sp"
+                tools:layout_margin="18sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="4dp"
+                    tools:layout_editor_absoluteY="-4dp">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Ha tenido usted que llamar al número de emergencia 911?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:padding="10sp"
+                        android:text=" Si ha llamado al 911 ¿puede describir la situación por la que llamó? Fue un/a:"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Robo"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Emergencia médica"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Incendio"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButton6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Desastre natural"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButton7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Accidente de tráfico"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:layout_margin="10sp"
+                        android:text="Otros..." />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:gravity="center"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:padding="10sp"
+                        android:text="¿El tiempo de respuesta de los servicios de emergencia fue adecuado?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:gravity="center"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:padding="10sp"
+                        android:text="¿Los servicios de emergencia que llegaron al lugar de la emergencia fueron útiles y efectivos?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:gravity="center"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:padding="10sp"
+                        android:text="En una escala del 1 al 5.  ¿Cree usted que los servicios de emergencia son lo suficientemente accesibles en su sector? ¿Puede calificar el servicio? Siendo 1 lo más bajo y 5 lo más alto"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="2"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="3"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"/>
+
+                    <RadioButton
+                        android:id="@+id/radioButton15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="4"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view7"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:padding="10sp"
+                        android:gravity="center"
+                        android:text="¿Qué instituciones tienen en su comunidad para su disponibilidad?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Policía"
+                        android:textColor="@color/black"
+                        android:layout_margin="10sp"
+                        android:textSize="20sp"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Departamento de Bomberos"
+                        android:textColor="@color/black"
+                        android:layout_margin="10sp"
+                        android:textSize="20sp"/>
+
+                    <CheckBox
+                        android:id="@+id/checkBox3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Dispensario Médico (IESS)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Dispensario Médico (MSP)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Otros..."
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view8"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:gravity="center"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:padding="10sp"
+                        android:text="¿Por qué razón no ha utilizado el número de emergencia 911?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:text="Porque..."
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:gravity="center"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:padding="10sp"
+                        android:text="¿Le gustaría disponer de una aplicación para la gestión de emergencias comunitarias para su comunidad?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>
