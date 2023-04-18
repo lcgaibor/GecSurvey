@@ -9,12 +9,14 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="185dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout4"
@@ -49,95 +51,91 @@
                 android:padding="10sp"
                 tools:layout_margin="18sp">
 
-                <TextView
-                    android:id="@+id/textView4"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/quicksand_bold"
-                    android:gravity="center"
-                    android:padding="10sp"
-                    android:text="Datos Personales"
-                    android:textColor="@color/colorverde"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Nombres Completos"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="65dp" />
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="Datos Personales"
+                        android:textColor="@color/colorverde"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/editTextPhone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    android:ems="10"
-                    android:inputType="phone"
-                    android:text="Teléfono"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteX="10dp"
-                    tools:layout_editor_absoluteY="259dp" />
+                    <EditText
+                        android:id="@+id/editTextTextPersonName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Nombres Completos"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
-                <EditText
-                    android:id="@+id/editTextNumber"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:text="Cédula"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteX="10dp"
-                    tools:layout_editor_absoluteY="123dp" />
+                    <EditText
+                        android:id="@+id/editTextNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:text="Cédula"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Dirección"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteX="10dp"
-                    tools:layout_editor_absoluteY="191dp" />
+                    <EditText
+                        android:id="@+id/editTextPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:inputType="phone"
+                        android:text="Teléfono"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
-                <EditText
-                    android:id="@+id/editTextDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    android:ems="10"
-                    android:inputType="date"
-                    android:text="Fecha de Nacimiento"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteX="10dp"
-                    tools:layout_editor_absoluteY="326dp" />
+                    <EditText
+                        android:id="@+id/editTextTextPersonName2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Dirección"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
-                <EditText
-                    android:id="@+id/editTextTextEmailAddress"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    android:ems="10"
-                    android:inputType="textEmailAddress"
-                    android:text="Correo"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    tools:layout_editor_absoluteX="10dp"
-                    tools:layout_editor_absoluteY="394dp" />
+                    <EditText
+                        android:id="@+id/editTextDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:inputType="date"
+                        android:text="Fecha de Nacimiento"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextEmailAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:inputType="textEmailAddress"
+                        android:text="Correo"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -173,6 +171,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
+                        android:padding="13dp"
                         android:text="Sí"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
@@ -182,6 +181,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
+                        android:padding="13dp"
                         android:text="No"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
@@ -196,10 +196,10 @@
                         android:id="@+id/textView7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
                         android:layout_margin="10sp"
                         android:background="@drawable/button_border"
                         android:backgroundTint="@color/verde5"
+                        android:gravity="center"
                         android:padding="10sp"
                         android:text=" Si ha llamado al 911 ¿puede describir la situación por la que llamó? Fue un/a:"
                         android:textColor="@color/black"
@@ -230,7 +230,7 @@
                         android:layout_margin="10sp"
                         android:text="Incendio"
                         android:textColor="@color/black"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <RadioButton
                         android:id="@+id/radioButton6"
@@ -239,7 +239,7 @@
                         android:layout_margin="10sp"
                         android:text="Desastre natural"
                         android:textColor="@color/black"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <RadioButton
                         android:id="@+id/radioButton7"
@@ -248,18 +248,18 @@
                         android:layout_margin="10sp"
                         android:text="Accidente de tráfico"
                         android:textColor="@color/black"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <EditText
                         android:id="@+id/editTextTextPersonName3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
                         android:ems="10"
                         android:inputType="textPersonName"
+                        android:text="Otros..."
                         android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:layout_margin="10sp"
-                        android:text="Otros..." />
+                        android:textSize="20sp" />
 
                     <View
                         android:id="@+id/view3"
@@ -272,9 +272,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
-                        android:gravity="center"
                         android:background="@drawable/button_border"
                         android:backgroundTint="@color/verde5"
+                        android:gravity="center"
                         android:padding="10sp"
                         android:text="¿El tiempo de respuesta de los servicios de emergencia fue adecuado?"
                         android:textColor="@color/black"
@@ -309,9 +309,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
-                        android:gravity="center"
                         android:background="@drawable/button_border"
                         android:backgroundTint="@color/verde5"
+                        android:gravity="center"
                         android:padding="10sp"
                         android:text="¿Los servicios de emergencia que llegaron al lugar de la emergencia fueron útiles y efectivos?"
                         android:textColor="@color/black"
@@ -346,58 +346,65 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
-                        android:gravity="center"
                         android:background="@drawable/button_border"
                         android:backgroundTint="@color/verde5"
+                        android:gravity="center"
                         android:padding="10sp"
                         android:text="En una escala del 1 al 5.  ¿Cree usted que los servicios de emergencia son lo suficientemente accesibles en su sector? ¿Puede calificar el servicio? Siendo 1 lo más bajo y 5 lo más alto"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton12"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="1"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/radioButton13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="2"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton14"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="3"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"/>
+                        <RadioButton
+                            android:id="@+id/radioButton13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="2"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton15"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="4"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="3"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton16"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="5"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="4"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="5"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
 
                     <View
                         android:id="@+id/view7"
@@ -412,8 +419,8 @@
                         android:layout_margin="10sp"
                         android:background="@drawable/button_border"
                         android:backgroundTint="@color/verde5"
-                        android:padding="10sp"
                         android:gravity="center"
+                        android:padding="10sp"
                         android:text="¿Qué instituciones tienen en su comunidad para su disponibilidad?"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
@@ -422,19 +429,19 @@
                         android:id="@+id/checkBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
                         android:text="Policía"
                         android:textColor="@color/black"
-                        android:layout_margin="10sp"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <CheckBox
                         android:id="@+id/checkBox2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
                         android:text="Departamento de Bomberos"
                         android:textColor="@color/black"
-                        android:layout_margin="10sp"
-                        android:textSize="20sp"/>
+                        android:textSize="20sp" />
 
                     <CheckBox
                         android:id="@+id/checkBox3"
@@ -476,9 +483,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
-                        android:gravity="center"
                         android:background="@drawable/button_border"
                         android:backgroundTint="@color/verde5"
+                        android:gravity="center"
                         android:padding="10sp"
                         android:text="¿Por qué razón no ha utilizado el número de emergencia 911?"
                         android:textColor="@color/black"
@@ -490,19 +497,25 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
                         android:ems="10"
-                        android:text="Porque..."
                         android:inputType="textPersonName"
+                        android:text="Porque..."
                         android:textColor="@color/black"
                         android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view9"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
 
                     <TextView
                         android:id="@+id/textView22"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
-                        android:gravity="center"
                         android:background="@drawable/button_border"
                         android:backgroundTint="@color/verde5"
+                        android:gravity="center"
                         android:padding="10sp"
                         android:text="¿Le gustaría disponer de una aplicación para la gestión de emergencias comunitarias para su comunidad?"
                         android:textColor="@color/black"
@@ -528,6 +541,1431 @@
 
                 </LinearLayout>
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_bord_cont_perfil"
+                android:elevation="20dp"
+                android:padding="10sp"
+                tools:layout_margin="18sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Ha presenciado o ha sido víctima de un robo en su sector en los dos últimos años? Si es así ¿Con qué frecuencia?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Nunca"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Uno"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Dos"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Tres o más"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view10"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿En qué momento del día se produjo el robo?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Por la mañana (6:00 am - 11:59 am)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Por la tarde (12:00 pm - 18:59 pm)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Por la noche (19:00 pm - 23:59 pm)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Por la madrugada (00:00 am - 5:59 am)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view11"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Qué tipo de objeto(s) fue robado en su presencia?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Teléfonos"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Carteras"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Vehículos"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Otros..."
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view12"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Qué objeto(s), ha observado, que utilizan los ladrones al realizar un robo?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Un/a.."
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view13"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Cree que la policía o las autoridades locales están tomando suficientes medidas para prevenir robos en la zona?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view14"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="En una escala del 1 al 5.  ¿Cómo describiría el nivel de seguridad en su sector en cuanto a robos? (Siendo 1 lo más bajo y 5 lo más alto)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButton29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="2"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton31"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="3"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton32"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="4"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton33"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="5"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_bord_cont_perfil"
+                android:elevation="20dp"
+                android:padding="10sp"
+                tools:layout_margin="18sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Ha estado involucrado o ha sido víctima en un accidente de tránsito en los últimos dos últimos años? "
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view15"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="Si ha estado involucrado en un accidente de tránsito en los dos últimos años, ¿Puede especificar su rol?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton36"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Peatón"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton37"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Conductor"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton38"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Pasajero"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton39"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Ciclista"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Otros..."
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view17"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿En qué tipo de vehículo(s) sufrió o estuvo involucrado el accidente?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Trailer"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Automóvil"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Camioneta"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBox11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Motocicleta"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Otros..."
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view18"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Cree usted que la señalización en las carreteras y calles son adecuadas?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton40"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton41"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view19"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Cree usted que la educación vial es suficiente para prevenir accidentes de tránsito?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton42"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton43"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view20"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Cree usted que los conductores en su zona respetan las reglas de tránsito?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton44"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton45"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view21"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Cree usted que las autoridades locales están tomando suficientes medidas para prevenir accidentes de tránsito?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton46"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton47"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_bord_cont_perfil"
+                android:elevation="20dp"
+                android:padding="10sp"
+                tools:layout_margin="18sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Ha experimentado un incendio o desastre natural (como una inundación o sismo) en los últimos dos años?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton48"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton49"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view22"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿En su comunidad se dispone de un plan de emergencia para desastres naturales o incendios?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton50"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton51"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view23"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="En una escala del 1 al 5. ¿Cómo califica el nivel de preparación y respuesta de las autoridades ante un desastre o incendio? (Siendo 1 lo más bajo y 5 lo más alto)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButton52"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton53"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="2"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton54"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="3"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton55"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="4"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton56"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="5"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view24"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView41"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Ha utilizado los servicios de bomberos en los últimos 2 años?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton57"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton58"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view25"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Cree usted que los servicios de bomberos son lo suficientemente accesibles en su comunidad?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton59"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton60"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view26"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="En una escala del 1 al 5. ¿Qué tan satisfecho está usted con la comunicación y el nivel de información que recibe del servicio de bomberos de su comunidad? (Siendo 1 lo más bajo y 5 lo más alto)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButton61"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton62"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="2"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton63"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="3"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton64"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="4"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton65"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="5"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_bord_cont_perfil"
+                android:elevation="20dp"
+                android:padding="10sp"
+                tools:layout_margin="18sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView50"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="En una escala del 1 al 5, ¿qué tan común es la actividad sospechosa en su vecindario o comunidad? (Siendo 1 lo más bajo y 5 lo más alto)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButton66"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton67"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="2"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton68"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="3"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton69"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="4"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton70"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="5"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view27"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView52"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="En una escala del 1 al 5, ¿qué tan cómodo se siente denunciando actividades sospechosas a las autoridades? (Siendo 1 lo más bajo y 5 lo más alto)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButton71"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton72"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="2"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton73"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="3"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton74"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="4"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton75"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="5"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view28"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView53"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="En una escala del 1 al 5.  ¿Ha notado usted alguna actividad sospechosa relacionada con drogas en su comunidad en los últimos dos años? ¿Con qué frecuencia? (Siendo 1 lo más bajo y 5 lo más alto)"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButton76"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="1"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton77"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="2"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton78"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="3"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton79"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="4"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton80"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:layout_weight="1"
+                            android:text="5"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/view29"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView54"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Cree que la presencia de drogas en su comunidad afecta la seguridad?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton81"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton82"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/text_bord_cont_perfil"
+                android:elevation="20dp"
+                android:padding="10sp"
+                tools:layout_margin="18sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView55"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Ha visto a personas indigentes en su comunidad?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton83"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton84"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view30"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView56"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text=" ¿Se ha sentido incómodo o inseguro?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton85"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton86"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view31"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView57"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Cree que la cantidad de personas indigentes en su comunidad ha aumentado o disminuido en los últimos dos años?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton87"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Aumentado"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton88"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Disminuido"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton89"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No ha cambiado"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton90"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No estoy seguro"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view32"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#D9D9D9" />
+
+                    <TextView
+                        android:id="@+id/textView58"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/button_border"
+                        android:backgroundTint="@color/verde5"
+                        android:gravity="center"
+                        android:padding="10sp"
+                        android:text="¿Cree que las autoridades locales están haciendo lo suficiente para ayudar a las personas sin hogar en su comunidad?"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton91"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="Sí"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton92"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:text="No"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="249dp"
+                    android:layout_height="62dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="@color/verde4"
+                    android:elevation="40dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:text="Enviar Encuesta"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
