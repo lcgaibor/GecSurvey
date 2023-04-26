@@ -10,141 +10,161 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="185dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout4"
+            <!-- Encabezado -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="130sp"
-                android:background="@drawable/text_bord_perfil"
-                android:elevation="30dp">
+                android:layout_height="wrap_content"
+                android:visibility="gone">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="130dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="130dp"
-                    android:fontFamily="@font/quicksand_bold"
-                    android:text="ENCUESTA"
-                    android:textColor="@color/colorverde"
-                    android:textSize="35sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/text_bord_cont_perfil"
-                android:elevation="20dp"
-                android:padding="10sp"
-                tools:layout_margin="18sp">
-
-                <LinearLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="130sp"
+                    android:background="@drawable/text_bord_perfil"
+                    android:elevation="30dp">
 
                     <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="match_parent"
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="130dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="130dp"
                         android:fontFamily="@font/quicksand_bold"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="Datos Personales"
+                        android:text="ENCUESTA"
                         android:textColor="@color/colorverde"
-                        android:textSize="30sp"
-                        android:textStyle="bold" />
+                        android:textSize="35sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName"
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Datos personales -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/text_bord_cont_perfil"
+                    android:elevation="20dp"
+                    android:padding="10sp"
+                    tools:layout_margin="18sp">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Nombres Completos"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent"
+                        android:padding="10sp"
+                        android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/editTextNumber"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="number"
-                        android:text="Cédula"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:gravity="center"
+                            android:padding="10sp"
+                            android:text="Datos Personales"
+                            android:textColor="@color/colorverde"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/editTextPhone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="phone"
-                        android:text="Teléfono"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <EditText
+                            android:id="@+id/editTextTextPersonName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:hint="Nombres Completos"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Dirección"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <EditText
+                            android:id="@+id/editTextNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:ems="10"
+                            android:inputType="number"
+                            android:hint="Cédula"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
 
-                    <EditText
-                        android:id="@+id/editTextDate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="date"
-                        android:text="Fecha de Nacimiento"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <EditText
+                            android:id="@+id/editTextPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:ems="10"
+                            android:inputType="phone"
+                            android:hint="Teléfono"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
 
-                    <EditText
-                        android:id="@+id/editTextTextEmailAddress"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="textEmailAddress"
-                        android:text="Correo"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <EditText
+                            android:id="@+id/editTextTextPersonName2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:hint="Dirección"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/editTextDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:ems="10"
+                            android:inputType="date"
+                            android:hint="Fecha de Nacimiento"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                        <EditText
+                            android:id="@+id/editTextTextEmailAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:ems="10"
+                            android:inputType="textEmailAddress"
+                            android:hint="Correo"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
 
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Primera seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/text_bord_cont_perfil"
                 android:elevation="20dp"
                 android:padding="10sp"
-                tools:layout_margin="18sp">
+                tools:layout_margin="18sp"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -155,7 +175,7 @@
 
                     <TextView
                         android:id="@+id/textView5"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10sp"
                         android:background="@drawable/button_border"
@@ -166,25 +186,31 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:padding="13dp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:padding="13dp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:padding="13dp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"/>
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:padding="13dp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view"
@@ -192,315 +218,361 @@
                         android:layout_height="1dp"
                         android:background="#D9D9D9" />
 
-                    <TextView
-                        android:id="@+id/textView7"
+                    <!-- Para si -->
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text=" Si ha llamado al 911 ¿puede describir la situación por la que llamó? Fue un/a:"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:visibility="gone">
 
-                    <RadioButton
-                        android:id="@+id/radioButton3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Robo"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Emergencia médica"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Incendio"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Desastre natural"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Accidente de tráfico"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Otros..."
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <View
-                        android:id="@+id/view3"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#D9D9D9" />
-
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="¿El tiempo de respuesta de los servicios de emergencia fue adecuado?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <View
-                        android:id="@+id/view5"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#D9D9D9" />
-
-                    <TextView
-                        android:id="@+id/textView8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="¿Los servicios de emergencia que llegaron al lugar de la emergencia fueron útiles y efectivos?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <View
-                        android:id="@+id/view6"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#D9D9D9" />
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="En una escala del 1 al 5.  ¿Cree usted que los servicios de emergencia son lo suficientemente accesibles en su sector? ¿Puede calificar el servicio? Siendo 1 lo más bajo y 5 lo más alto"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <RadioButton
-                            android:id="@+id/radioButton12"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10sp"
-                            android:text="1"
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/radioButton13"
-                            android:layout_width="wrap_content"
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text=" Si ha llamado al 911 ¿puede describir la situación por la que llamó? Fue un/a:"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Robo"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Emergencia médica"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Incendio"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Desastre natural"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Accidente de tráfico"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                            <EditText
+                                android:id="@+id/editTextTextPersonName3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:ems="10"
+                                android:inputType="textPersonName"
+                                android:text="Otros..."
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <View
+                                android:id="@+id/view3"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#D9D9D9" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="¿El tiempo de respuesta de los servicios de emergencia fue adecuado?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Sí"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="No"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                            <View
+                                android:id="@+id/view5"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#D9D9D9" />
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="¿Los servicios de emergencia que llegaron al lugar de la emergencia fueron útiles y efectivos?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Sí"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="No"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                            <View
+                                android:id="@+id/view6"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#D9D9D9" />
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="En una escala del 1 al 5.  ¿Cree usted que los servicios de emergencia son lo suficientemente accesibles en su sector? ¿Puede calificar el servicio? Siendo 1 lo más bajo y 5 lo más alto"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="1"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton13"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="2"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="3"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton15"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="4"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton16"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="5"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+                            </RadioGroup>
+
+                            <View
+                                android:id="@+id/view7"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#D9D9D9" />
+
+                            <TextView
+                                android:id="@+id/textView20"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="¿Qué instituciones tienen en su comunidad para su disponibilidad?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:text="Policía"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:text="Departamento de Bomberos"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:text="Dispensario Médico (IESS)"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:text="Dispensario Médico (MSP)"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <EditText
+                                android:id="@+id/editTextTextPersonName4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:ems="10"
+                                android:inputType="textPersonName"
+                                android:hint="Otros..."
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <View
+                                android:id="@+id/view8"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#D9D9D9" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Para no -->
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10sp"
-                            android:text="2"
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            android:orientation="vertical">
 
-                        <RadioButton
-                            android:id="@+id/radioButton14"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10sp"
-                            android:text="3"
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="¿Por qué razón no ha utilizado el número de emergencia 911?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton15"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10sp"
-                            android:text="4"
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
+                            <EditText
+                                android:id="@+id/editTextTextPersonName5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:ems="10"
+                                android:inputType="textPersonName"
+                                android:text="Porque..."
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10sp"
-                            android:text="5"
-                            android:textColor="@color/black"
-                            android:textSize="20sp" />
+                        </LinearLayout>
 
-                    </LinearLayout>
-
-                    <View
-                        android:id="@+id/view7"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#D9D9D9" />
-
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="¿Qué instituciones tienen en su comunidad para su disponibilidad?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Policía"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Departamento de Bomberos"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Dispensario Médico (IESS)"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <CheckBox
-                        android:id="@+id/checkBox4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Dispensario Médico (MSP)"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Otros..."
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <View
-                        android:id="@+id/view8"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#D9D9D9" />
-
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="¿Por qué razón no ha utilizado el número de emergencia 911?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
-
-                    <EditText
-                        android:id="@+id/editTextTextPersonName5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Porque..."
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                    </androidx.cardview.widget.CardView>
 
                     <View
                         android:id="@+id/view9"
@@ -521,35 +593,42 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton17"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton18"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                    </RadioGroup>
 
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- Segunda seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/text_bord_cont_perfil"
                 android:elevation="20dp"
                 android:padding="10sp"
-                tools:layout_margin="18sp">
+                tools:layout_margin="18sp"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -569,41 +648,48 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton19"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Nunca"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton20"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Uno"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Nunca"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton21"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Dos"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Uno"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton22"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Tres o más"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Dos"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Tres o más"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
+
 
                     <View
                         android:id="@+id/view10"
@@ -611,141 +697,162 @@
                         android:layout_height="1dp"
                         android:background="#D9D9D9" />
 
-                    <TextView
-                        android:id="@+id/textView24"
+                    <!-- Para uno, dos, tres o mas -->
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="¿En qué momento del día se produjo el robo?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:visibility="gone">
 
-                    <RadioButton
-                        android:id="@+id/radioButton23"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Por la mañana (6:00 am - 11:59 am)"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/radioButton24"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Por la tarde (12:00 pm - 18:59 pm)"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <TextView
+                                android:id="@+id/textView24"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="¿En qué momento del día se produjo el robo?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton25"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Por la noche (19:00 pm - 23:59 pm)"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton26"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Por la madrugada (00:00 am - 5:59 am)"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                                <RadioButton
+                                    android:id="@+id/radioButton23"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Por la mañana (6:00 am - 11:59 am)"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <View
-                        android:id="@+id/view11"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#D9D9D9" />
+                                <RadioButton
+                                    android:id="@+id/radioButton24"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Por la tarde (12:00 pm - 18:59 pm)"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/textView25"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="¿Qué tipo de objeto(s) fue robado en su presencia?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                                <RadioButton
+                                    android:id="@+id/radioButton25"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Por la noche (19:00 pm - 23:59 pm)"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <CheckBox
-                        android:id="@+id/checkBox5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Teléfonos"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                                <RadioButton
+                                    android:id="@+id/radioButton26"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Por la madrugada (00:00 am - 5:59 am)"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <CheckBox
-                        android:id="@+id/checkBox6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Carteras"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            </RadioGroup>
 
-                    <CheckBox
-                        android:id="@+id/checkBox7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Vehículos"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <View
+                                android:id="@+id/view11"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#D9D9D9" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Otros..."
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <TextView
+                                android:id="@+id/textView25"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="¿Qué tipo de objeto(s) fue robado en su presencia?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
 
-                    <View
-                        android:id="@+id/view12"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#D9D9D9" />
+                            <CheckBox
+                                android:id="@+id/checkBox5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:text="Teléfonos"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/textView26"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="¿Qué objeto(s), ha observado, que utilizan los ladrones al realizar un robo?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <CheckBox
+                                android:id="@+id/checkBox6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:text="Carteras"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Un/a.."
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <CheckBox
+                                android:id="@+id/checkBox7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:text="Vehículos"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <EditText
+                                android:id="@+id/editTextTextPersonName6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:ems="10"
+                                android:inputType="textPersonName"
+                                android:hint="Otros..."
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <View
+                                android:id="@+id/view12"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#D9D9D9" />
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="¿Qué objeto(s), ha observado, que utilizan los ladrones al realizar un robo?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <EditText
+                                android:id="@+id/editTextTextPersonName7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:ems="10"
+                                android:inputType="textPersonName"
+                                android:hint="Un/a.."
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
                     <View
                         android:id="@+id/view13"
@@ -766,23 +873,29 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton27"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton28"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton28"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view14"
@@ -803,7 +916,7 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <LinearLayout
+                    <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
@@ -853,18 +966,20 @@
                             android:textColor="@color/black"
                             android:textSize="20sp" />
 
-                    </LinearLayout>
+                    </RadioGroup>
 
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- Tercera seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/text_bord_cont_perfil"
                 android:elevation="20dp"
                 android:padding="10sp"
-                tools:layout_margin="18sp">
+                tools:layout_margin="18sp"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -884,23 +999,29 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton34"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton35"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton34"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton35"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view15"
@@ -908,131 +1029,150 @@
                         android:layout_height="1dp"
                         android:background="#D9D9D9" />
 
-                    <TextView
-                        android:id="@+id/textView32"
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="Si ha estado involucrado en un accidente de tránsito en los dos últimos años, ¿Puede especificar su rol?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="wrap_content">
 
-                    <RadioButton
-                        android:id="@+id/radioButton36"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Peatón"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/radioButton37"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Conductor"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <TextView
+                                android:id="@+id/textView32"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="Si ha estado involucrado en un accidente de tránsito en los dos últimos años, ¿Puede especificar su rol?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton38"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Pasajero"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton39"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Ciclista"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                                <RadioButton
+                                    android:id="@+id/radioButton36"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Peatón"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Otros..."
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                                <RadioButton
+                                    android:id="@+id/radioButton37"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Conductor"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <View
-                        android:id="@+id/view17"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#D9D9D9" />
+                                <RadioButton
+                                    android:id="@+id/radioButton38"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Pasajero"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/textView33"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="¿En qué tipo de vehículo(s) sufrió o estuvo involucrado el accidente?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                                <RadioButton
+                                    android:id="@+id/radioButton39"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Ciclista"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <CheckBox
-                        android:id="@+id/checkBox8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Trailer"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            </RadioGroup>
 
-                    <CheckBox
-                        android:id="@+id/checkBox9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Automóvil"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <EditText
+                                android:id="@+id/editTextTextPersonName8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:ems="10"
+                                android:inputType="textPersonName"
+                                android:hint="Otros..."
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
 
-                    <CheckBox
-                        android:id="@+id/checkBox10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Camioneta"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <View
+                                android:id="@+id/view17"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#D9D9D9" />
 
-                    <CheckBox
-                        android:id="@+id/checkBox11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Motocicleta"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <TextView
+                                android:id="@+id/textView33"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="¿En qué tipo de vehículo(s) sufrió o estuvo involucrado el accidente?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
 
-                    <EditText
-                        android:id="@+id/editTextTextPersonName9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:text="Otros..."
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <CheckBox
+                                android:id="@+id/checkBox8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:text="Trailer"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:text="Automóvil"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:text="Camioneta"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:text="Motocicleta"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <EditText
+                                android:id="@+id/editTextTextPersonName9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:ems="10"
+                                android:inputType="textPersonName"
+                                android:hint="Otros..."
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
 
                     <View
                         android:id="@+id/view18"
@@ -1053,23 +1193,29 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton40"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton41"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton40"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton41"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view19"
@@ -1090,23 +1236,29 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton42"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton43"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton42"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton43"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view20"
@@ -1127,23 +1279,29 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton44"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton45"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton44"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton45"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view21"
@@ -1164,26 +1322,34 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton46"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton47"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton46"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton47"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
+
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- Cuarta seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -1210,23 +1376,29 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton48"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton49"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton48"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton49"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view22"
@@ -1247,23 +1419,29 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton50"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton51"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton50"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton51"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view23"
@@ -1284,7 +1462,7 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <LinearLayout
+                    <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
@@ -1334,7 +1512,7 @@
                             android:textColor="@color/black"
                             android:textSize="20sp" />
 
-                    </LinearLayout>
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view24"
@@ -1357,23 +1535,29 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton57"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton58"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton57"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton58"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view25"
@@ -1394,23 +1578,29 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton59"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton60"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton59"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton60"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view26"
@@ -1431,7 +1621,7 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <LinearLayout
+                    <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
@@ -1485,11 +1675,12 @@
                             android:text="5"
                             android:textColor="@color/black"
                             android:textSize="20sp" />
-                    </LinearLayout>
+                    </RadioGroup>
 
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- Quinta seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -1516,7 +1707,7 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <LinearLayout
+                    <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
@@ -1570,7 +1761,7 @@
                             android:text="5"
                             android:textColor="@color/black"
                             android:textSize="20sp" />
-                    </LinearLayout>
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view27"
@@ -1592,7 +1783,7 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <LinearLayout
+                    <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
@@ -1646,7 +1837,7 @@
                             android:text="5"
                             android:textColor="@color/black"
                             android:textSize="20sp" />
-                    </LinearLayout>
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view28"
@@ -1664,11 +1855,11 @@
                         android:backgroundTint="@color/verde5"
                         android:gravity="center"
                         android:padding="10sp"
-                        android:text="En una escala del 1 al 5.  ¿Ha notado usted alguna actividad sospechosa relacionada con drogas en su comunidad en los últimos dos años? ¿Con qué frecuencia? (Siendo 1 lo más bajo y 5 lo más alto)"
+                        android:text="En una escala del 1 al 5. ¿Ha notado usted alguna actividad sospechosa relacionada con drogas en su comunidad en los últimos dos años? ¿Con qué frecuencia? (Siendo 1 lo más bajo y 5 lo más alto)"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <LinearLayout
+                    <RadioGroup
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
@@ -1722,7 +1913,7 @@
                             android:text="5"
                             android:textColor="@color/black"
                             android:textSize="20sp" />
-                    </LinearLayout>
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view29"
@@ -1744,27 +1935,33 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton81"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton82"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton81"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton82"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+                    </RadioGroup>
 
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- Sexta seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -1791,23 +1988,29 @@
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton83"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent">
 
-                    <RadioButton
-                        android:id="@+id/radioButton84"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <RadioButton
+                            android:id="@+id/radioButton83"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="Sí"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton84"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:text="No"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                    </RadioGroup>
 
                     <View
                         android:id="@+id/view30"
@@ -1816,135 +2019,170 @@
                         android:layout_weight="1"
                         android:background="#D9D9D9" />
 
-                    <TextView
-                        android:id="@+id/textView56"
+                    <!-- Para si -->
+
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text=" ¿Se ha sentido incómodo o inseguro?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        >
 
-                    <RadioButton
-                        android:id="@+id/radioButton85"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/radioButton86"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <TextView
+                                android:id="@+id/textView56"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text=" ¿Se ha sentido incómodo o inseguro?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
 
-                    <View
-                        android:id="@+id/view31"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_weight="1"
-                        android:background="#D9D9D9" />
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/textView57"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="¿Cree que la cantidad de personas indigentes en su comunidad ha aumentado o disminuido en los últimos dos años?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                                <RadioButton
+                                    android:id="@+id/radioButton85"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Sí"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton87"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Aumentado"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                                <RadioButton
+                                    android:id="@+id/radioButton86"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="No"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton88"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Disminuido"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            </RadioGroup>
 
-                    <RadioButton
-                        android:id="@+id/radioButton89"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No ha cambiado"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <View
+                                android:id="@+id/view31"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:background="#D9D9D9" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton90"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No estoy seguro"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                            <TextView
+                                android:id="@+id/textView57"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="¿Cree que la cantidad de personas indigentes en su comunidad ha aumentado o disminuido en los últimos dos años?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
 
-                    <View
-                        android:id="@+id/view32"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_weight="1"
-                        android:background="#D9D9D9" />
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/textView58"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:background="@drawable/button_border"
-                        android:backgroundTint="@color/verde5"
-                        android:gravity="center"
-                        android:padding="10sp"
-                        android:text="¿Cree que las autoridades locales están haciendo lo suficiente para ayudar a las personas sin hogar en su comunidad?"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                                <RadioButton
+                                    android:id="@+id/radioButton87"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Aumentado"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton91"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="Sí"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                                <RadioButton
+                                    android:id="@+id/radioButton88"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Disminuido"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
 
-                    <RadioButton
-                        android:id="@+id/radioButton92"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10sp"
-                        android:text="No"
-                        android:textColor="@color/black"
-                        android:textSize="20sp" />
+                                <RadioButton
+                                    android:id="@+id/radioButton89"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="No ha cambiado"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton90"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="No estoy seguro"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                            <View
+                                android:id="@+id/view32"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_weight="1"
+                                android:background="#D9D9D9" />
+
+                            <TextView
+                                android:id="@+id/textView58"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10sp"
+                                android:background="@drawable/button_border"
+                                android:backgroundTint="@color/verde5"
+                                android:gravity="center"
+                                android:padding="10sp"
+                                android:text="¿Cree que las autoridades locales están haciendo lo suficiente para ayudar a las personas sin hogar en su comunidad?"
+                                android:textColor="@color/black"
+                                android:textSize="20sp" />
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <RadioButton
+                                    android:id="@+id/radioButton91"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="Sí"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton92"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10sp"
+                                    android:text="No"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!-- Boton -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
