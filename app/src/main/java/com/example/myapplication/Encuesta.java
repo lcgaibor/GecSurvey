@@ -77,6 +77,7 @@ public class Encuesta extends AppCompatActivity {
         grupoS5Preg2 = findViewById(R.id.grupoS5Preg2);
         grupoS5Preg3 = findViewById(R.id.grupoS5Preg3);
         grupoS5Preg4 = findViewById(R.id.grupoS5Preg4);
+        grupoS5Preg5 = findViewById(R.id.grupoS5Preg5);
 
         grupoS6Preg1 = findViewById(R.id.grupoS6Preg1);
         pSPregunta1S6 = findViewById(R.id.pSPregunta1S6);
@@ -344,6 +345,16 @@ public class Encuesta extends AppCompatActivity {
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P4_S5", auxRadBut.getText().toString());
+
+        }
+        checkedRadioButtonId = grupoS5Preg5.getCheckedRadioButtonId();
+        if (checkedRadioButtonId == -1) {
+            validar();
+            return;
+        } else {
+            auxRadBut = findViewById(checkedRadioButtonId);
+            params.put("P5_S5", auxRadBut.getText().toString());
+
         }
 
     }
