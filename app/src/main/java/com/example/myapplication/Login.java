@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        validarSesion();
+        //validarSesion();
 
         txtUsuario = findViewById(R.id.usuario);
         txtContrasenia = findViewById(R.id.contrasenia);
@@ -63,7 +63,7 @@ public class Login extends AppCompatActivity {
         });
 
     }
-
+/*
     private void validarSesion(){
         SharedPreferences preferencias = getSharedPreferences("PrefLogin", Context.MODE_PRIVATE);
         boolean sesion = preferencias.getBoolean("sesion",false);
@@ -73,7 +73,7 @@ public class Login extends AppCompatActivity {
             finish();
         }
     }
-
+*/
     private void validarUsuario(String usuario, String contrasenia){
         StringRequest stringRequest = new StringRequest(Request.Method.POST, IP+"/login/sign",
                 new Response.Listener<String>() {
