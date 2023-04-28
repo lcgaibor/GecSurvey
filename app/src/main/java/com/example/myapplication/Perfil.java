@@ -117,6 +117,9 @@ public class Perfil extends AppCompatActivity {
                     public void onResponse(String response) {
                         if (!response.isEmpty()){
                             Toast.makeText(getApplicationContext(),"Actualizacion de datos correcta", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(Perfil.this, MenuApp.class);
+                            startActivity(intent);
+                            finish();
                         }else {
                             Toast.makeText(getApplicationContext(),"Error al actualizar datos", Toast.LENGTH_SHORT).show();
                         }
