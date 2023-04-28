@@ -53,17 +53,20 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!-- Datos personales -->
-            <androidx.cardview.widget.CardView
+            <View
+                android:id="@+id/view39"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <!-- Datos personales -->
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/text_bord_cont_perfil"
-                    android:elevation="20dp"
+                    android:elevation="10dp"
                     android:padding="10sp"
                     
                     tools:layout_margin="18sp">
@@ -156,7 +159,12 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.cardview.widget.CardView>
+            <View
+                android:id="@+id/view33"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                tools:layout_editor_absoluteX="10dp" />
 
             <!-- Primera seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -629,6 +637,14 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+            <View
+                android:id="@+id/view34"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                tools:layout_editor_absoluteX="10dp" />
+
             <!-- Segunda seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -638,6 +654,7 @@
                 android:padding="10sp"
                 
                 tools:layout_margin="18sp">
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -713,6 +730,7 @@
                         android:id="@+id/pSPregunta1S2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
+
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -983,6 +1001,13 @@
 
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view35"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                tools:layout_editor_absoluteX="10dp" />
 
             <!-- Tercera seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -1369,6 +1394,13 @@
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <View
+                android:id="@+id/view36"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                tools:layout_editor_absoluteX="10dp" />
+
             <!-- Cuarta seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -1706,6 +1738,13 @@
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <View
+                android:id="@+id/view37"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                tools:layout_editor_absoluteX="10dp" />
+
             <!-- Quinta seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -2034,6 +2073,13 @@
 
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view38"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                tools:layout_editor_absoluteX="10dp" />
 
             <!-- Sexta seccion -->
             <androidx.constraintlayout.widget.ConstraintLayout
