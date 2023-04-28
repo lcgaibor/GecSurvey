@@ -28,10 +28,9 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout4"
                     android:layout_width="match_parent"
-                    android:layout_height="130sp"
+                    android:layout_height="135sp"
                     android:background="@drawable/text_bord_perfil"
-                    android:elevation="30dp"
-                    >
+                    android:elevation="30dp">
 
                     <TextView
                         android:id="@+id/textView2"
@@ -2305,6 +2304,13 @@
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view40"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                tools:layout_editor_absoluteX="10dp" />
 
             <!-- Boton -->
             <androidx.constraintlayout.widget.ConstraintLayout
