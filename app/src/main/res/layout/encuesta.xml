@@ -19,10 +19,7 @@
             android:orientation="vertical">
 
             <!-- Encabezado -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
+
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -50,7 +47,6 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.cardview.widget.CardView>
 
             <View
                 android:id="@+id/view39"
@@ -180,7 +176,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     tools:layout_editor_absoluteX="4dp"
-                    tools:layout_editor_absoluteY="-4dp">
+                    tools:layout_editor_absoluteY="4dp">
 
                     <TextView
                         android:id="@+id/textView5"
