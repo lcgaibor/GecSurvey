@@ -124,7 +124,7 @@ public class RegistrarUsuario extends AppCompatActivity {
     }
 
     private void registrarUsuario(String usuario, String nombre, String apellido, String contrasenia){
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, IP+"/login/signup",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, IP+"/loginVin/signup",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

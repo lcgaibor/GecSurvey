@@ -105,7 +105,7 @@ public class Perfil extends AppCompatActivity {
 
     private void cargarPerfil() {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, IP+"/usuario",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, IP+"/usuarioVin",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -151,7 +151,7 @@ public class Perfil extends AppCompatActivity {
         SApellido = apellido.getText().toString();
         SContrasenia = contrasenia.getText().toString();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.PUT, IP+"/usuario/"+Scorreo,
+        StringRequest stringRequest = new StringRequest(Request.Method.PUT, IP+"/usuarioVin/"+Scorreo,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

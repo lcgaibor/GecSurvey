@@ -248,7 +248,7 @@ public class Encuesta extends AppCompatActivity {
         if(!bandera){seccion6();};
 
         if(!bandera) {
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, IP + "/encuesta",
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, IP + "/encuestaVin",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
