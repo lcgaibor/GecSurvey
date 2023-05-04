@@ -3,13 +3,17 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -22,7 +26,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
+import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class Encuesta extends AppCompatActivity {
@@ -40,6 +46,11 @@ public class Encuesta extends AppCompatActivity {
     SharedPreferences preferencias;
 
     boolean bandera;
+
+    EditText editTextTextPersonName, editTextDate;
+
+    // Guardar el último año, mes y día del mes
+    private int ultimoAnio, ultimoMes, ultimoDiaDelMes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,7 +102,80 @@ public class Encuesta extends AppCompatActivity {
         preferencias = getSharedPreferences("PrefLogin", Context.MODE_PRIVATE);
 
         bandera = false;
+
+        editTextTextPersonName = findViewById(R.id.editTextTextPersonName);
+
+        editTextTextPersonName.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (!s.toString().matches("[a-zA-Z ]+")) {
+                    editTextTextPersonName.setError("Solo se permiten caracteres del alfabeto");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+
+
+        editTextDate = findViewById(R.id.editTextDate);
+
+        // Poner último año, mes y día a la fecha de hoy
+        final Calendar calendario = Calendar.getInstance();
+        ultimoAnio = calendario.get(Calendar.YEAR);
+        ultimoMes = calendario.get(Calendar.MONTH);
+        ultimoDiaDelMes = calendario.get(Calendar.DAY_OF_MONTH);
+
+        // Refrescar la fecha en el EditText
+        refrescarFechaEnEditText();
+
+        // Hacer que el datepicker se muestre cuando toquen el EditText; recuerda
+        // que se podría invocar en el click de cualquier otro botón, o en cualquier
+        // otro evento
+
+        editTextDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Aquí es cuando dan click así que mostramos el DatePicker
+
+                // Le pasamos lo que haya en las globales
+                DatePickerDialog dialogoFecha = new DatePickerDialog(Encuesta.this, listenerDeDatePicker, ultimoAnio, ultimoMes, ultimoDiaDelMes);
+                //Mostrar
+                dialogoFecha.show();
+            }
+        });
+
     }
+
+    // Crear un listener del datepicker;
+    private DatePickerDialog.OnDateSetListener listenerDeDatePicker = new DatePickerDialog.OnDateSetListener() {
+        @Override
+        public void onDateSet(DatePicker view, int anio, int mes, int diaDelMes) {
+            ultimoAnio = anio;
+            ultimoMes = mes;
+            ultimoDiaDelMes = diaDelMes;
+
+            refrescarFechaEnEditText();
+
+        }
+    };
+
+    public void refrescarFechaEnEditText() {
+        // Formateamos la fecha pero podríamos hacer cualquier otra cosa ;)
+        String fecha = String.format(Locale.getDefault(), "%02d-%02d-%02d", ultimoAnio, ultimoMes+1, ultimoDiaDelMes);
+
+        // La ponemos en el editText
+        editTextDate.setText(fecha);
+    }
+
 
     private void eventosRadio (){
         grupoS1Preg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,8 +33,75 @@ public class RegistrarUsuario extends AppCompatActivity {
         setContentView(R.layout.registrar_usuario);
 
         usuarioR = findViewById(R.id.usuarioR);
+
+        String usuario = usuarioR.getText().toString();
+
+        usuarioR.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // no se requiere implementación
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (android.util.Patterns.EMAIL_ADDRESS.matcher(s).matches()) {
+                    if (s.toString().endsWith("@espe.edu.ec")) {
+                        // el correo electrónico pertenece al dominio example.com
+                    } else {
+                        usuarioR.setError("El correo electrónico no pertenece al dominio espe.edu.ec");
+                    }
+                } else {
+                    // el correo electrónico no tiene un formato válido
+                    usuarioR.setError("El correo electrónico no tiene un formato válido");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // no se requiere implementación
+            }
+        });
+
         nombreR = findViewById(R.id.nombreR);
+        nombreR.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (!s.toString().matches("[a-zA-Z ]+")) {
+                    nombreR.setError("Solo se permiten caracteres del alfabeto");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
         apellidoR = findViewById(R.id.apellidoR);
+        apellidoR.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (!s.toString().matches("[a-zA-Z ]+")) {
+                    apellidoR.setError("Solo se permiten caracteres del alfabeto");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
         contraseniaR = findViewById(R.id.contraseniaR);
 
         btnRegistrar = findViewById(R.id.btnRegistrar);
