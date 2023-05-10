@@ -113,7 +113,7 @@ public class Encuesta extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (!s.toString().matches("[a-zA-Z ]+")) {
+                if (!s.toString().matches("[\\p{L}a-zA-Z ]+")) {
                     editTextTextPersonName.setError("Solo se permiten caracteres del alfabeto");
                 }
             }
@@ -135,7 +135,7 @@ public class Encuesta extends AppCompatActivity {
         ultimoDiaDelMes = calendario.get(Calendar.DAY_OF_MONTH);
 
         // Refrescar la fecha en el EditText
-        refrescarFechaEnEditText();
+        //refrescarFechaEnEditText();
 
         // Hacer que el datepicker se muestre cuando toquen el EditText; recuerda
         // que se podría invocar en el click de cualquier otro botón, o en cualquier

@@ -51,7 +51,7 @@ public class Perfil extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (!s.toString().matches("[a-zA-Z ]+")) {
+                if (!s.toString().matches("[\\p{L}a-zA-Z ]+")) {
                     nombre.setError("Solo se permiten caracteres del alfabeto");
                 }
             }
@@ -71,7 +71,7 @@ public class Perfil extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (!s.toString().matches("[a-zA-Z ]+")) {
+                if (!s.toString().matches("[\\p{L}a-zA-Z ]+")) {
                     apellido.setError("Solo se permiten caracteres del alfabeto");
                 }
             }
