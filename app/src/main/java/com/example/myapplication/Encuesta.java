@@ -47,7 +47,7 @@ public class Encuesta extends AppCompatActivity {
 
     boolean bandera;
 
-    EditText editTextTextPersonName, editTextDate;
+    EditText editTextTextPersonName, editTextDate, editTextTextEmailAddress;
 
     // Guardar el último año, mes y día del mes
     private int ultimoAnio, ultimoMes, ultimoDiaDelMes;
@@ -153,6 +153,30 @@ public class Encuesta extends AppCompatActivity {
             }
         });
 
+
+        editTextTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
+        editTextTextEmailAddress.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // no se requiere implementación
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (android.util.Patterns.EMAIL_ADDRESS.matcher(s).matches()) {
+
+                } else {
+                    // el correo electrónico no tiene un formato válido
+                    editTextTextEmailAddress.setError("El correo electrónico no tiene un formato válido");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // no se requiere implementación
+            }
+        });
+
     }
 
     // Crear un listener del datepicker;
@@ -248,7 +272,7 @@ public class Encuesta extends AppCompatActivity {
         if(!bandera){seccion6();};
 
         if(!bandera) {
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, IP + "/encuestaVin",
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, IP + "/encuestaGec",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -329,8 +353,8 @@ public class Encuesta extends AppCompatActivity {
         }
         params.put("fNac", campo);
 
-        editText = findViewById(R.id.editTextTextEmailAddress);
-        campo = editText.getText().toString();
+        //editText = findViewById(R.id.editTextTextEmailAddress);
+        campo = editTextTextEmailAddress.getText().toString();
         if (TextUtils.isEmpty(campo)) {
             validar(); 
             return;

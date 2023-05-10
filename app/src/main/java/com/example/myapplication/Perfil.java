@@ -105,7 +105,7 @@ public class Perfil extends AppCompatActivity {
 
     private void cargarPerfil() {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, IP+"/usuarioVin",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, IP+"/usuarioGec",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

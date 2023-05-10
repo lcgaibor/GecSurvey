@@ -75,7 +75,7 @@ public class Login extends AppCompatActivity {
     }
 */
     private void validarUsuario(String usuario, String contrasenia){
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, IP+"/loginVin/sign",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, IP+"/loginGec/sign",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
