@@ -47,7 +47,7 @@ public class Encuesta extends AppCompatActivity {
 
     boolean bandera;
 
-    EditText editTextTextPersonName, editTextDate, editTextTextEmailAddress;
+    EditText editTextTextPersonName, editTextDate, editTextTextEmailAddress, editTextNumber;
 
     // Guardar el último año, mes y día del mes
     private int ultimoAnio, ultimoMes, ultimoDiaDelMes;
@@ -177,6 +177,29 @@ public class Encuesta extends AppCompatActivity {
             }
         });
 
+        editTextNumber = findViewById(R.id.editTextNumber);
+
+        editTextNumber.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // no se requiere implementación
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (validarCedula(s.toString())) {
+                } else {
+                    // el correo electrónico no tiene un formato válido
+                    editTextNumber.setError("El numero de cedula no válido");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // no se requiere implementación
+            }
+        });
     }
 
     // Crear un listener del datepicker;
@@ -305,6 +328,7 @@ public class Encuesta extends AppCompatActivity {
     }
 
 
+
     public void validar(){
         Toast.makeText(getApplicationContext(),"Faltan campos por llenar", Toast.LENGTH_SHORT).show();
         params.clear();
@@ -321,8 +345,7 @@ public class Encuesta extends AppCompatActivity {
         }
         params.put("nombre", campo);
 
-        editText = findViewById(R.id.editTextNumber);
-        campo = editText.getText().toString();
+        campo = editTextNumber.getText().toString();
         if (TextUtils.isEmpty(campo)) {
             validar(); 
             return;
@@ -361,6 +384,41 @@ public class Encuesta extends AppCompatActivity {
         }
         params.put("correo", campo);
     }
+
+    public boolean validarCedula(String cedula) {
+
+        int[] coeficientes = {2, 1, 2, 1, 2, 1, 2, 1, 2};
+        int total = 0;
+        int tamanoLongitudCedula = 10;
+        int residuo = 0;
+        int digitoVerificador = 0;
+
+        if (cedula == null || cedula.length() != tamanoLongitudCedula) {
+            return false;
+        }
+
+        String digitoString = cedula.substring(9,10);
+        digitoVerificador = Integer.parseInt(digitoString);
+
+        for (int i = 0; i < (tamanoLongitudCedula - 1); i++) {
+            int valor = Integer.parseInt(cedula.substring(i, i + 1));
+            int tmp = valor * coeficientes[i];
+            if (tmp > 9) {
+                tmp -= 9;
+            }
+            total += tmp;
+        }
+
+        residuo = total % 10;
+
+        if (residuo == 0) {
+            return digitoVerificador == 0;
+        } else {
+            return digitoVerificador == (10 - residuo);
+        }
+
+    }
+
 
     private void seccion6() {
         RadioButton auxRadBut;
