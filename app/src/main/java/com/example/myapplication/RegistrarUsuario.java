@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -118,6 +121,22 @@ public class RegistrarUsuario extends AppCompatActivity {
                 String apellido = apellidoR.getText().toString();
                 String contrasenia = contraseniaR.getText().toString();
                 Toast.makeText(getApplicationContext(),usuario, Toast.LENGTH_SHORT);
+
+                ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+                NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+
+                if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI){
+                    final WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+                    final WifiInfo connectionInfo = wifiManager.getConnectionInfo();
+                    String ssid = null;
+                    if (connectionInfo != null) {
+                        ssid = connectionInfo.getSSID();
+                    }
+                    if(ssid.contains("ESPE") || ssid.contains("INVITADOS") || ssid.contains("eduroam")  ){
+                        IP = "http://10.3.0.251:3000";
+                    }
+                }
+
                 registrarUsuario(usuario, nombre, apellido, contrasenia);
             }
         });

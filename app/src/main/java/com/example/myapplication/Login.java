@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -75,6 +77,22 @@ public class Login extends AppCompatActivity {
     }
 */
     private void validarUsuario(String usuario, String contrasenia){
+
+        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+
+        if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI){
+            final WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+            final WifiInfo connectionInfo = wifiManager.getConnectionInfo();
+            String ssid = null;
+            if (connectionInfo != null) {
+                ssid = connectionInfo.getSSID();
+            }
+            if(ssid.contains("ESPE") || ssid.contains("INVITADOS") || ssid.contains("eduroam")  ){
+                IP = "http://10.3.0.251:3000";
+            }
+        }
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, IP+"/loginGec/sign",
                 new Response.Listener<String>() {
                     @Override

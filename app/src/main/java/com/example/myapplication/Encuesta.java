@@ -7,6 +7,10 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -154,6 +158,30 @@ public class Encuesta extends AppCompatActivity {
         });
 
 
+        editTextDate.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // no se requiere implementación
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (validarEdad(s.toString())) {
+                } else {
+                    // el correo electrónico no tiene un formato válido
+                    editTextDate.setError("La edad no es válida");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // no se requiere implementación
+            }
+        });
+
+
+
         editTextTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
         editTextTextEmailAddress.addTextChangedListener(new TextWatcher() {
             @Override
@@ -294,6 +322,21 @@ public class Encuesta extends AppCompatActivity {
 
         if(!bandera){seccion6();};
 
+        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+
+        if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI){
+            final WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+            final WifiInfo connectionInfo = wifiManager.getConnectionInfo();
+            String ssid = null;
+            if (connectionInfo != null) {
+                ssid = connectionInfo.getSSID();
+            }
+            if(ssid.contains("ESPE") || ssid.contains("INVITADOS") || ssid.contains("eduroam")  ){
+                IP = "http://10.3.0.251:3000";
+            }
+        }
+
         if(!bandera) {
             StringRequest stringRequest = new StringRequest(Request.Method.POST, IP + "/encuestaGec",
                     new Response.Listener<String>() {
@@ -419,6 +462,22 @@ public class Encuesta extends AppCompatActivity {
 
     }
 
+    public boolean validarEdad(String edad){
+        int edadN;
+        if(edad.length() < 4){
+
+        } else {
+            try {
+                edadN = Integer.parseInt(edad.substring(0,4));
+            } catch (Exception e){
+                return false;
+            }
+            if((ultimoAnio - edadN) <= 130){
+                return true;
+            }
+        }
+        return false;
+    }
 
     private void seccion6() {
         RadioButton auxRadBut;
