@@ -44,22 +44,34 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/contraseniaR"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contraseniaR2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="50dp"
-            android:ems="10"
-            android:fontFamily="@font/quicksand_bold"
-            android:inputType="textPassword"
-            android:hint="Contraseña"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/black"
+            app:endIconMode="password_toggle"
+            app:passwordToggleDrawable="@android:drawable/ic_menu_view"
+            app:passwordToggleEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/apellidoR" />
+            app:layout_constraintTop_toBottomOf="@+id/apellidoR">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contraseniaR"
+                android:layout_width="233dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/quicksand_bold"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/apellidoR" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <EditText
             android:id="@+id/nombreR"
@@ -128,7 +140,7 @@
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contraseniaR" />
+            app:layout_constraintTop_toBottomOf="@+id/contraseniaR2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

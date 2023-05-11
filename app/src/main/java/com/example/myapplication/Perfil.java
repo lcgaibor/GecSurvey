@@ -30,6 +30,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class Perfil extends AppCompatActivity {
 
@@ -37,6 +38,12 @@ public class Perfil extends AppCompatActivity {
     Button btnEditar;
 
     String Scorreo, Snombre, SApellido, SContrasenia, SencuestasRealizadas;
+
+    private static final String PASSWORD_REGEX =
+            "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=.,;])(?=\\S+$).{8,15}$";
+
+    private static final Pattern PASSWORD_PATTERN =
+            Pattern.compile(PASSWORD_REGEX);
 
     private String IP;
 
@@ -87,6 +94,28 @@ public class Perfil extends AppCompatActivity {
         });
 
         contrasenia = findViewById(R.id.textView49);
+
+        contrasenia.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!validarContrasena(s.toString())){
+                    contrasenia.setError("La contraseña debe contener mínimo 8 caracteres y máximo 15, " +
+                            "además esta contraseña debe contener letras mayúsculas, minúsculas, numeros y simbolos");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+
         encuestasRealizadas = findViewById(R.id.textView19);
 
         btnEditar = findViewById(R.id.button554);
@@ -107,6 +136,9 @@ public class Perfil extends AppCompatActivity {
 
     }
 
+    public boolean validarContrasena(String contrasena) {
+        return PASSWORD_PATTERN.matcher(contrasena).matches();
+    }
     private void cargarPerfil() {
 
         ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -185,7 +217,7 @@ public class Perfil extends AppCompatActivity {
         SApellido = apellido.getText().toString();
         SContrasenia = contrasenia.getText().toString();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.PUT, IP+"/usuarioVin/"+Scorreo,
+        StringRequest stringRequest = new StringRequest(Request.Method.PUT, IP+"/usuarioGec/"+Scorreo,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

@@ -24,11 +24,19 @@ import com.android.volley.toolbox.StringRequest;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RegistrarUsuario extends AppCompatActivity {
     EditText usuarioR, nombreR, apellidoR, contraseniaR;
     Button btnRegistrar;
     private String IP;
+
+    private static final String PASSWORD_REGEX =
+            "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=.,;])(?=\\S+$).{8,15}$";
+
+    private static final Pattern PASSWORD_PATTERN =
+            Pattern.compile(PASSWORD_REGEX);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,11 +115,30 @@ public class RegistrarUsuario extends AppCompatActivity {
 
         contraseniaR = findViewById(R.id.contraseniaR);
 
+        contraseniaR.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if(!validarContrasena(s.toString())){
+                    contraseniaR.setError("La contraseña debe contener mínimo 8 caracteres y máximo 15, " +
+                            "además esta contraseña debe contener letras mayúsculas, minúsculas, numeros y simbolos");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
         btnRegistrar = findViewById(R.id.btnRegistrar);
 
         IP = getString(R.string.ip_serv);
 
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,6 +167,11 @@ public class RegistrarUsuario extends AppCompatActivity {
                 registrarUsuario(usuario, nombre, apellido, contrasenia);
             }
         });
+    }
+
+
+    public boolean validarContrasena(String contrasena) {
+        return PASSWORD_PATTERN.matcher(contrasena).matches();
     }
 
     private void registrarUsuario(String usuario, String nombre, String apellido, String contrasenia){
