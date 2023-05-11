@@ -322,7 +322,7 @@ public class Encuesta extends AppCompatActivity {
 
         if(!bandera){seccion6();};
 
-        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(ConnectivityManager.class);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
 
         if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI){
@@ -899,17 +899,24 @@ public class Encuesta extends AppCompatActivity {
         RadioButton auxRadBut;
         int checkedRadioButtonId = rgP.getCheckedRadioButtonId();
 
-        if (checkedRadioButtonId == -1) {
-            validar(); 
+        EditText editText = findViewById(R.id.editTextTextPersonName3);
+        String valor = editText.getText().toString();
+
+        if((checkedRadioButtonId == -1) && valor.isEmpty()){
+            validar();
             return;
-        } else {
+        }
+
+        //solo si esta seleccionado se envia el campo
+        if(!(checkedRadioButtonId == -1)){
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S1_P1",auxRadBut.getText().toString());
         }
 
-        EditText editText = findViewById(R.id.editTextTextPersonName3);
-        params.put("P1_S1_P1otro",editText.getText().toString());
-
+        if (!valor.isEmpty()){
+            params.put("P1_S1_P1otro",valor);
+            return;
+        }
 
         rgP = findViewById(R.id.rgP3);
         checkedRadioButtonId = rgP.getCheckedRadioButtonId();

@@ -141,7 +141,7 @@ public class Perfil extends AppCompatActivity {
     }
     private void cargarPerfil() {
 
-        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(ConnectivityManager.class);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
 
         if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI){
@@ -198,7 +198,7 @@ public class Perfil extends AppCompatActivity {
 
     private void actualizarPerfil() {
 
-        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(ConnectivityManager.class);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
 
         if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI){

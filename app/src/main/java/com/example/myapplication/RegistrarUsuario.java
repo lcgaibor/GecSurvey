@@ -159,11 +159,9 @@ public class RegistrarUsuario extends AppCompatActivity {
                 if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI){
                     final WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
                     final WifiInfo connectionInfo = wifiManager.getConnectionInfo();
-                    Toast.makeText(getApplicationContext(),connectionInfo.toString(),Toast.LENGTH_SHORT).show();
                     String ssid = null;
                     if (connectionInfo != null) {
                         ssid = connectionInfo.getSSID();
-                        Toast.makeText(getApplicationContext(),ssid,Toast.LENGTH_SHORT).show();
                     }
                     if(ssid.contains("ESPE") || ssid.contains("INVITADOS") || ssid.contains("eduroam")  ){
                         IP = "http://10.3.0.251:3000";

@@ -51,9 +51,6 @@ public class Login extends AppCompatActivity {
 
         IP = getString(R.string.ip_serv);
 
-        ConnectivityManager cm =
-                    (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-
         btnIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +75,7 @@ public class Login extends AppCompatActivity {
 */
     private void validarUsuario(String usuario, String contrasenia){
 
-        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(ConnectivityManager.class);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
 
         if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI){
