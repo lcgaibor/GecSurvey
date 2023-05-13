@@ -63,7 +63,7 @@
                     android:background="@drawable/text_bord_cont_perfil"
                     android:elevation="10dp"
                     android:padding="10sp"
-                    
+
                     tools:layout_margin="18sp">
 
                     <LinearLayout
