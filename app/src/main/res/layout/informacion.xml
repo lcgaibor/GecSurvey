@@ -25,7 +25,7 @@
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
-                android:layout_height="258dp"
+                android:layout_height="153dp"
                 app:srcCompat="@drawable/img_informacion" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -41,20 +41,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="116dp"
-                    android:layout_marginTop="30dp"
                     android:layout_marginEnd="115dp"
                     android:text="SE SURVEY"
                     android:textColor="@color/colorverde"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.48"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView13"
-                    android:layout_width="359dp"
-                    android:layout_height="140dp"
+                    android:layout_width="363dp"
+                    android:layout_height="149dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
@@ -71,8 +71,8 @@
 
                 <TextView
                     android:id="@+id/textView17"
-                    android:layout_width="359dp"
-                    android:layout_height="140dp"
+                    android:layout_width="356dp"
+                    android:layout_height="152dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:justificationMode="inter_word"
@@ -88,8 +88,8 @@
 
                 <TextView
                     android:id="@+id/textView31"
-                    android:layout_width="359dp"
-                    android:layout_height="140dp"
+                    android:layout_width="367dp"
+                    android:layout_height="160dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
                     android:justificationMode="inter_word"
