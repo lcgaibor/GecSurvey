@@ -4,34 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
     android:backgroundTint="@color/verde4"
     android:foregroundTint="@color/verde4"
-    tools:context=".Inicio">
+    android:background="#FFFFFF">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:elevation="30dp"
-        android:layout_height="650sp"
+        android:layout_width="408dp"
+        android:layout_height="463dp"
         android:background="@drawable/text_bord_inicio"
-        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="match_parent"
-            android:layout_height="446dp"
+            android:layout_width="238dp"
+            android:layout_height="246dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="94dp"
+            android:layout_marginEnd="76dp"
+            android:layout_marginBottom="152dp"
             app:srcCompat="@drawable/img_inicio" />
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="240dp"
+            android:layout_height="76dp"
+            android:layout_alignBottom="@+id/imageView7"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="99dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="-53dp"
             android:fontFamily="@font/quicksand_bold"
             android:text="SE SURVEY"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -39,44 +47,45 @@
             android:textSize="40sp"
             android:textStyle="bold" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="210dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="70dp"
+        android:layout_width="343dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_border"
         android:backgroundTint="@color/colorverde"
         android:fontFamily="@font/quicksand_bold"
         android:text="Iniciar sesión"
-        android:elevation="30dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@id/btnRegistro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.282"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+        app:layout_constraintVertical_bias="0.793" />
 
     <Button
         android:id="@+id/btnRegistro"
-        android:layout_width="210dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="70dp"
+        android:layout_width="356dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/button_border"
         android:backgroundTint="@color/black"
         android:fontFamily="@font/quicksand_bold"
         android:text="Crear cuenta"
-        android:elevation="30dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.044" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

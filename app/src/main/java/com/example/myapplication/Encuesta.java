@@ -876,6 +876,8 @@ public class Encuesta extends AppCompatActivity {
         checkedRadioButtonId = grupoS1Preg2.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
+            int lastChildPos=grupoS1Preg2.getChildCount()-1;
+            ((RadioButton)grupoS1Preg2.getChildAt(lastChildPos)).setError("Debes completar esta pregunta");
             validar(); 
             return;
         } else {
@@ -888,6 +890,7 @@ public class Encuesta extends AppCompatActivity {
         EditText editText = findViewById(R.id.editTextTextPersonName5);
 
         if (TextUtils.isEmpty(editText.getText().toString())) {
+            editText.setError("Debes completar esta pregunta");
             validar(); 
             return;
         }
@@ -903,6 +906,7 @@ public class Encuesta extends AppCompatActivity {
         String valor = editText.getText().toString();
 
         if((checkedRadioButtonId == -1) && valor.isEmpty()){
+            editText.setError("Debes completar esta pregunta");
             validar();
             return;
         }
@@ -965,6 +969,7 @@ public class Encuesta extends AppCompatActivity {
         String respuesta = (val1+val2+val3+val4+val5).replaceFirst("..$","");
 
         if (TextUtils.isEmpty(respuesta)) {
+            editText.setError("Debes completar esta pregunta");
             validar(); 
             return;
         }
