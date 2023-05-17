@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -55,6 +56,9 @@ public class Encuesta extends AppCompatActivity {
 
     // Guardar el último año, mes y día del mes
     private int ultimoAnio, ultimoMes, ultimoDiaDelMes;
+
+    // Poner último año, mes y día a la fecha de hoy
+    final Calendar calendario = Calendar.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,22 +132,11 @@ public class Encuesta extends AppCompatActivity {
             }
         });
 
-
-
         editTextDate = findViewById(R.id.editTextDate);
 
-        // Poner último año, mes y día a la fecha de hoy
-        final Calendar calendario = Calendar.getInstance();
-        ultimoAnio = calendario.get(Calendar.YEAR);
-        ultimoMes = calendario.get(Calendar.MONTH);
-        ultimoDiaDelMes = calendario.get(Calendar.DAY_OF_MONTH);
-
-        // Refrescar la fecha en el EditText
-        //refrescarFechaEnEditText();
-
-        // Hacer que el datepicker se muestre cuando toquen el EditText; recuerda
-        // que se podría invocar en el click de cualquier otro botón, o en cualquier
-        // otro evento
+        ultimoAnio = 2000;
+        ultimoMes = 0;
+        ultimoDiaDelMes = 1;
 
         editTextDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,7 +163,7 @@ public class Encuesta extends AppCompatActivity {
                 if (validarEdad(s.toString())) {
                 } else {
                     // el correo electrónico no tiene un formato válido
-                    editTextDate.setError("La edad no es válida");
+                    editTextDate.setError("La fecha de nacimiento no es válida");
                 }
             }
 
@@ -250,7 +243,6 @@ public class Encuesta extends AppCompatActivity {
         // La ponemos en el editText
         editTextDate.setText(fecha);
     }
-
 
     private void eventosRadio (){
         grupoS1Preg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -370,12 +362,10 @@ public class Encuesta extends AppCompatActivity {
 
     }
 
-
-
-    public void validar(){
-        Toast.makeText(getApplicationContext(),"Faltan campos por llenar", Toast.LENGTH_SHORT).show();
+    public void validar(String valor){
+        //Toast.makeText(getApplicationContext(),"Faltan campos por llenar en" + valor, Toast.LENGTH_SHORT).show();
         params.clear();
-        bandera = true;
+        //bandera = true;
     }
 
     private void datosPersonales() {
@@ -383,49 +373,64 @@ public class Encuesta extends AppCompatActivity {
         EditText editText = findViewById(R.id.editTextTextPersonName);
         String campo = editText.getText().toString();
         if (TextUtils.isEmpty(campo)) {
-            validar(); 
-            return;
+            editText.setError("Completar este campo");
+            bandera = true;
+        } else {
+            params.put("nombre", campo);
         }
-        params.put("nombre", campo);
+        
 
         campo = editTextNumber.getText().toString();
         if (TextUtils.isEmpty(campo)) {
-            validar(); 
-            return;
+            editTextNumber.setError("Completar este campo");
+            bandera = true;
+        } else {
+            params.put("cedula", campo);
         }
-        params.put("cedula", campo);
+        
 
         editText = findViewById(R.id.editTextPhone);
         campo = editText.getText().toString();
         if (TextUtils.isEmpty(campo)) {
-            validar(); 
-            return;
+            editText.setError("Completar este campo");
+            bandera = true;
+        } else {
+            params.put("telefono", campo);
         }
-        params.put("telefono", campo);
+        
 
         editText = findViewById(R.id.editTextTextPersonName2);
         campo = editText.getText().toString();
         if (TextUtils.isEmpty(campo)) {
-            validar(); 
-            return;
+            editText.setError("Completar este campo");
+            bandera = true;
+        } else {
+            params.put("direccion", campo);
         }
-        params.put("direccion", campo);
+        
 
         editText = findViewById(R.id.editTextDate);
         campo = editText.getText().toString();
         if (TextUtils.isEmpty(campo)) {
-            validar(); 
-            return;
+            editText.setError("Completar este campo");
+            bandera = true;
+        } else {
+            params.put("fNac", campo);
         }
-        params.put("fNac", campo);
-
+        
         //editText = findViewById(R.id.editTextTextEmailAddress);
         campo = editTextTextEmailAddress.getText().toString();
         if (TextUtils.isEmpty(campo)) {
-            validar(); 
+            editTextTextEmailAddress.setError("Completar este campo");
+            bandera = true;
+        } else {
+            params.put("correo", campo);
+        }
+        
+        if(bandera){
+            validar("Datos Personales");
             return;
         }
-        params.put("correo", campo);
     }
 
     public boolean validarCedula(String cedula) {
@@ -462,8 +467,9 @@ public class Encuesta extends AppCompatActivity {
 
     }
 
-    public boolean validarEdad(String edad){
+    public boolean validarEdad( String edad){
         int edadN;
+        ultimoAnio = calendario.get(Calendar.YEAR);
         if(edad.length() < 4){
 
         } else {
@@ -472,7 +478,7 @@ public class Encuesta extends AppCompatActivity {
             } catch (Exception e){
                 return false;
             }
-            if((ultimoAnio - edadN) <= 130){
+            if(((ultimoAnio - edadN) <= 130) && (ultimoAnio - edadN) > 1){
                 return true;
             }
         }
@@ -484,7 +490,7 @@ public class Encuesta extends AppCompatActivity {
 
         int checkedRadioButtonId = grupoS6Preg1.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -503,7 +509,7 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = rgP.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -514,7 +520,7 @@ public class Encuesta extends AppCompatActivity {
         rgP = findViewById(R.id.rgP2S6);
         checkedRadioButtonId = rgP.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -524,7 +530,7 @@ public class Encuesta extends AppCompatActivity {
         rgP = findViewById(R.id.rgP3S6);
         checkedRadioButtonId = rgP.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -538,7 +544,7 @@ public class Encuesta extends AppCompatActivity {
 
         int checkedRadioButtonId = grupoS5Preg1.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -547,7 +553,7 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS5Preg2.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -556,7 +562,7 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS5Preg3.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -565,7 +571,7 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS5Preg4.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -574,7 +580,7 @@ public class Encuesta extends AppCompatActivity {
         }
         checkedRadioButtonId = grupoS5Preg5.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar();
+            //validar();
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -589,7 +595,7 @@ public class Encuesta extends AppCompatActivity {
 
         int checkedRadioButtonId = grupoS4Preg1.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -598,7 +604,7 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS4Preg2.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -607,7 +613,7 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS4Preg3.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -616,7 +622,7 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS4Preg4.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -625,7 +631,7 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS4Preg5.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -634,7 +640,7 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS4Preg6.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -648,7 +654,7 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = grupoS3Preg1.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -662,7 +668,7 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS3Preg2.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -672,7 +678,7 @@ public class Encuesta extends AppCompatActivity {
         
         checkedRadioButtonId = grupoS3Preg3.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -681,7 +687,7 @@ public class Encuesta extends AppCompatActivity {
         
         checkedRadioButtonId = grupoS3Preg4.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -690,7 +696,7 @@ public class Encuesta extends AppCompatActivity {
         
         checkedRadioButtonId = grupoS3Preg5.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -704,7 +710,7 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = rgP.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -731,7 +737,7 @@ public class Encuesta extends AppCompatActivity {
         String respuesta = (val1+val2+val3+val4+val5).replaceFirst("..$","");
 
         if (TextUtils.isEmpty(respuesta)) {
-            validar(); 
+            //validar(); 
             return;
         }
 
@@ -744,7 +750,7 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = grupoS2Preg1.getCheckedRadioButtonId();
         
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -758,7 +764,7 @@ public class Encuesta extends AppCompatActivity {
         checkedRadioButtonId = grupoS2Preg2.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -768,7 +774,7 @@ public class Encuesta extends AppCompatActivity {
         checkedRadioButtonId = grupoS2Preg3.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             switch (checkedRadioButtonId) {
@@ -804,7 +810,7 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = rgP.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -829,7 +835,7 @@ public class Encuesta extends AppCompatActivity {
         String respuesta = (val1+val2+val3+val4).replaceFirst("..$","");
 
         if (TextUtils.isEmpty(respuesta)) {
-            validar(); 
+            //validar(); 
             return;
         }
         params.put("P1_S2_P2",respuesta);
@@ -838,7 +844,7 @@ public class Encuesta extends AppCompatActivity {
         respuesta = editText.getText().toString();
 
         if (TextUtils.isEmpty(respuesta)) {
-            validar(); 
+            //validar(); 
             return;
         }
         params.put("P1_S2_P3",respuesta);
@@ -852,7 +858,7 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = grupoS1Preg1.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             switch (checkedRadioButtonId) {
@@ -878,7 +884,7 @@ public class Encuesta extends AppCompatActivity {
         if (checkedRadioButtonId == -1) {
             int lastChildPos=grupoS1Preg2.getChildCount()-1;
             ((RadioButton)grupoS1Preg2.getChildAt(lastChildPos)).setError("Debes completar esta pregunta");
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -891,7 +897,7 @@ public class Encuesta extends AppCompatActivity {
 
         if (TextUtils.isEmpty(editText.getText().toString())) {
             editText.setError("Debes completar esta pregunta");
-            validar(); 
+            //validar(); 
             return;
         }
         params.put("P1_S1_P1_N",editText.getText().toString());
@@ -907,7 +913,7 @@ public class Encuesta extends AppCompatActivity {
 
         if((checkedRadioButtonId == -1) && valor.isEmpty()){
             editText.setError("Debes completar esta pregunta");
-            validar();
+            //validar();
             return;
         }
 
@@ -925,7 +931,7 @@ public class Encuesta extends AppCompatActivity {
         rgP = findViewById(R.id.rgP3);
         checkedRadioButtonId = rgP.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -935,7 +941,7 @@ public class Encuesta extends AppCompatActivity {
         rgP = findViewById(R.id.rgP4);
         checkedRadioButtonId = rgP.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -945,7 +951,7 @@ public class Encuesta extends AppCompatActivity {
         rgP = findViewById(R.id.rgP5);
         checkedRadioButtonId = rgP.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            validar(); 
+            //validar(); 
             return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
@@ -970,7 +976,7 @@ public class Encuesta extends AppCompatActivity {
 
         if (TextUtils.isEmpty(respuesta)) {
             editText.setError("Debes completar esta pregunta");
-            validar(); 
+            //validar(); 
             return;
         }
 
