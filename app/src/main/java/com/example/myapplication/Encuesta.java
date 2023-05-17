@@ -23,6 +23,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -60,10 +61,23 @@ public class Encuesta extends AppCompatActivity {
     // Poner último año, mes y día a la fecha de hoy
     final Calendar calendario = Calendar.getInstance();
 
+    TextView textView5, textView22, textViewGlobal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.encuesta);
+
+        textView5 = findViewById(R.id.textView5);
+        textView22 = findViewById(R.id.textView22);
+
+
+
+
+
+
+
+
 
         grupoS1Preg1 = findViewById(R.id.grupoS1Preg1);
         pSPregunta1 = findViewById(R.id.pSPregunta1);
@@ -150,7 +164,6 @@ public class Encuesta extends AppCompatActivity {
             }
         });
 
-
         editTextDate.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -172,8 +185,6 @@ public class Encuesta extends AppCompatActivity {
                 // no se requiere implementación
             }
         });
-
-
 
         editTextTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
         editTextTextEmailAddress.addTextChangedListener(new TextWatcher() {
@@ -363,9 +374,15 @@ public class Encuesta extends AppCompatActivity {
     }
 
     public void validar(String valor){
-        //Toast.makeText(getApplicationContext(),"Faltan campos por llenar en" + valor, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Faltan campos por llenar en " + valor, Toast.LENGTH_SHORT).show();
         params.clear();
         //bandera = true;
+    }
+
+    public void validar(){
+        Toast.makeText(getApplicationContext(),"Faltan campos por llenar", Toast.LENGTH_SHORT).show();
+        params.clear();
+        bandera = true;
     }
 
     private void datosPersonales() {
@@ -426,10 +443,10 @@ public class Encuesta extends AppCompatActivity {
         } else {
             params.put("correo", campo);
         }
-        
+
         if(bandera){
             validar("Datos Personales");
-            return;
+            //return;
         }
     }
 
@@ -490,8 +507,11 @@ public class Encuesta extends AppCompatActivity {
 
         int checkedRadioButtonId = grupoS6Preg1.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView55);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S6", auxRadBut.getText().toString());
@@ -499,6 +519,10 @@ public class Encuesta extends AppCompatActivity {
             if( checkedRadioButtonId == R.id.radioButton83){
                 cargarpSPregunta1S6();
             }
+        }
+
+        if (bandera){
+            validar();
         }
     }
 
@@ -509,8 +533,11 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = rgP.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView56);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S6_P1",auxRadBut.getText().toString());
@@ -520,8 +547,11 @@ public class Encuesta extends AppCompatActivity {
         rgP = findViewById(R.id.rgP2S6);
         checkedRadioButtonId = rgP.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView57);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S6_P2",auxRadBut.getText().toString());
@@ -530,11 +560,18 @@ public class Encuesta extends AppCompatActivity {
         rgP = findViewById(R.id.rgP3S6);
         checkedRadioButtonId = rgP.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView58);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S6_P3",auxRadBut.getText().toString());
+        }
+
+        if (bandera){
+            validar();
         }
 
     }
@@ -544,8 +581,11 @@ public class Encuesta extends AppCompatActivity {
 
         int checkedRadioButtonId = grupoS5Preg1.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView50);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S5", auxRadBut.getText().toString());
@@ -553,8 +593,11 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS5Preg2.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView52);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P2_S5", auxRadBut.getText().toString());
@@ -562,8 +605,11 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS5Preg3.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            //validar(); 
-            return;
+            textViewGlobal = findViewById(R.id.textView53);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
+            //validar();
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P3_S5", auxRadBut.getText().toString());
@@ -571,8 +617,11 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS5Preg4.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView54);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P4_S5", auxRadBut.getText().toString());
@@ -580,12 +629,19 @@ public class Encuesta extends AppCompatActivity {
         }
         checkedRadioButtonId = grupoS5Preg5.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView30);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar();
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P5_S5", auxRadBut.getText().toString());
 
+        }
+
+        if (bandera){
+            validar();
         }
 
     }
@@ -595,8 +651,11 @@ public class Encuesta extends AppCompatActivity {
 
         int checkedRadioButtonId = grupoS4Preg1.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView38);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S4", auxRadBut.getText().toString());
@@ -604,8 +663,11 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS4Preg2.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView39);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P2_S4", auxRadBut.getText().toString());
@@ -613,8 +675,11 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS4Preg3.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView40);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P3_S4", auxRadBut.getText().toString());
@@ -622,8 +687,11 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS4Preg4.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView41);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P4_S4", auxRadBut.getText().toString());
@@ -631,8 +699,11 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS4Preg5.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView42);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P5_S4", auxRadBut.getText().toString());
@@ -640,11 +711,18 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS4Preg6.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView43);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P6_S4", auxRadBut.getText().toString());
+        }
+
+        if(bandera){
+            validar();
         }
     }
 
@@ -654,8 +732,11 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = grupoS3Preg1.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView29);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S3", auxRadBut.getText().toString());
@@ -668,8 +749,11 @@ public class Encuesta extends AppCompatActivity {
 
         checkedRadioButtonId = grupoS3Preg2.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView34);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P2_S3", auxRadBut.getText().toString());
@@ -678,8 +762,11 @@ public class Encuesta extends AppCompatActivity {
         
         checkedRadioButtonId = grupoS3Preg3.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView35);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P3_S3", auxRadBut.getText().toString());
@@ -687,8 +774,11 @@ public class Encuesta extends AppCompatActivity {
         
         checkedRadioButtonId = grupoS3Preg4.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView36);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P4_S3", auxRadBut.getText().toString());
@@ -696,11 +786,18 @@ public class Encuesta extends AppCompatActivity {
         
         checkedRadioButtonId = grupoS3Preg5.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView37);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P5_S3", auxRadBut.getText().toString());
+        }
+
+        if (bandera){
+            validar();
         }
     }
 
@@ -710,8 +807,11 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = rgP.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView32);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S3_P1",auxRadBut.getText().toString());
@@ -737,11 +837,19 @@ public class Encuesta extends AppCompatActivity {
         String respuesta = (val1+val2+val3+val4+val5).replaceFirst("..$","");
 
         if (TextUtils.isEmpty(respuesta)) {
+            textViewGlobal = findViewById(R.id.textView33);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
+        } else {
+            params.put("P1_S3_P2",respuesta);
         }
 
-        params.put("P1_S3_P2",respuesta);
+        if(bandera){
+            validar();
+        }
+
     }
 
     private void seccion2() {
@@ -750,8 +858,11 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = grupoS2Preg1.getCheckedRadioButtonId();
         
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView23);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S2", auxRadBut.getText().toString());
@@ -764,8 +875,10 @@ public class Encuesta extends AppCompatActivity {
         checkedRadioButtonId = grupoS2Preg2.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
-            //validar(); 
-            return;
+            textViewGlobal = findViewById(R.id.textView27);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P2_S2", auxRadBut.getText().toString());
@@ -774,8 +887,11 @@ public class Encuesta extends AppCompatActivity {
         checkedRadioButtonId = grupoS2Preg3.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView28);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             switch (checkedRadioButtonId) {
                 case R.id.radioButton29:
@@ -802,6 +918,10 @@ public class Encuesta extends AppCompatActivity {
             //params.put("P3_S2", auxRadBut.getText().toString());
         }
 
+        if(bandera){
+            validar();
+        }
+
     }
 
     private void cargarpSPregunta1S2() {
@@ -810,8 +930,11 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = rgP.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView24);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S2_P1",auxRadBut.getText().toString());
@@ -835,19 +958,32 @@ public class Encuesta extends AppCompatActivity {
         String respuesta = (val1+val2+val3+val4).replaceFirst("..$","");
 
         if (TextUtils.isEmpty(respuesta)) {
+            textViewGlobal = findViewById(R.id.textView25);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
+        } else {
+            params.put("P1_S2_P2",respuesta);
         }
-        params.put("P1_S2_P2",respuesta);
+
 
         editText = findViewById(R.id.editTextTextPersonName7);
         respuesta = editText.getText().toString();
 
         if (TextUtils.isEmpty(respuesta)) {
+            textViewGlobal = findViewById(R.id.textView26);
+            textViewGlobal.setError("Debe completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
+        } else {
+            params.put("P1_S2_P3",respuesta);
         }
-        params.put("P1_S2_P3",respuesta);
+
+        if(bandera){
+            validar();
+        }
 
     }
 
@@ -858,8 +994,8 @@ public class Encuesta extends AppCompatActivity {
         int checkedRadioButtonId = grupoS1Preg1.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
-            //validar(); 
-            return;
+            textView5.setError("Debe completar esta pregunta");
+            bandera = true;
         } else {
             switch (checkedRadioButtonId) {
                 case R.id.radioButton:
@@ -882,13 +1018,15 @@ public class Encuesta extends AppCompatActivity {
         checkedRadioButtonId = grupoS1Preg2.getCheckedRadioButtonId();
 
         if (checkedRadioButtonId == -1) {
-            int lastChildPos=grupoS1Preg2.getChildCount()-1;
-            ((RadioButton)grupoS1Preg2.getChildAt(lastChildPos)).setError("Debes completar esta pregunta");
-            //validar(); 
-            return;
+            textView22.setError("Debe completar esta pregunta");
+            bandera = true;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P2_S1", auxRadBut.getText().toString());
+        }
+
+        if(bandera){
+            validar();
         }
     }
 
@@ -897,10 +1035,17 @@ public class Encuesta extends AppCompatActivity {
 
         if (TextUtils.isEmpty(editText.getText().toString())) {
             editText.setError("Debes completar esta pregunta");
-            //validar(); 
-            return;
+            bandera = true;
+            //validar();
+            //return;
+        } else {
+            params.put("P1_S1_P1_N",editText.getText().toString());
         }
-        params.put("P1_S1_P1_N",editText.getText().toString());
+
+        if (bandera){
+            validar();
+        }
+
     }
 
     private void cargarpSPregunta1() {
@@ -912,12 +1057,12 @@ public class Encuesta extends AppCompatActivity {
         String valor = editText.getText().toString();
 
         if((checkedRadioButtonId == -1) && valor.isEmpty()){
-            editText.setError("Debes completar esta pregunta");
-            //validar();
-            return;
+            textViewGlobal = findViewById(R.id.textView7);
+            textViewGlobal.setError("Debes completar esta pregunta");
+            bandera = true;
+            //return;
         }
 
-        //solo si esta seleccionado se envia el campo
         if(!(checkedRadioButtonId == -1)){
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S1_P1",auxRadBut.getText().toString());
@@ -925,14 +1070,16 @@ public class Encuesta extends AppCompatActivity {
 
         if (!valor.isEmpty()){
             params.put("P1_S1_P1otro",valor);
-            return;
+            //return;
         }
 
         rgP = findViewById(R.id.rgP3);
         checkedRadioButtonId = rgP.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            //validar(); 
-            return;
+            textViewGlobal = findViewById(R.id.textView3);
+            textViewGlobal.setError("Debes completar esta pregunta");
+            bandera = true;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S1_P2",auxRadBut.getText().toString());
@@ -941,8 +1088,10 @@ public class Encuesta extends AppCompatActivity {
         rgP = findViewById(R.id.rgP4);
         checkedRadioButtonId = rgP.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            //validar(); 
-            return;
+            textViewGlobal = findViewById(R.id.textView8);
+            textViewGlobal.setError("Debes completar esta pregunta");
+            bandera = true;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S1_P3",auxRadBut.getText().toString());
@@ -951,8 +1100,11 @@ public class Encuesta extends AppCompatActivity {
         rgP = findViewById(R.id.rgP5);
         checkedRadioButtonId = rgP.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
+            textViewGlobal = findViewById(R.id.textView9);
+            textViewGlobal.setError("Debes completar esta pregunta");
+            bandera = true;
             //validar(); 
-            return;
+            //return;
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S1_P4",auxRadBut.getText().toString());
@@ -975,12 +1127,18 @@ public class Encuesta extends AppCompatActivity {
         String respuesta = (val1+val2+val3+val4+val5).replaceFirst("..$","");
 
         if (TextUtils.isEmpty(respuesta)) {
-            editText.setError("Debes completar esta pregunta");
-            //validar(); 
-            return;
+            textViewGlobal = findViewById(R.id.textView20);
+            textViewGlobal.setError("Debes completar esta pregunta");
+            bandera = true;
+            //validar();
+            //return;
+        } else {
+            params.put("P1_S1_P5",respuesta);
         }
 
-        params.put("P1_S1_P5",respuesta);
+        if(bandera){
+            validar();
+        }
 
     }
 }
