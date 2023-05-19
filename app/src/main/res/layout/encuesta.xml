@@ -73,7 +73,6 @@
                         android:padding="10sp">
 
                         <TextView
-                            android:id="@+id/textView4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/quicksand_bold"
@@ -83,6 +82,16 @@
                             android:textColor="@color/colorverde"
                             android:textSize="30sp"
                             android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quicksand_bold"
+                            android:gravity="center"
+                            android:padding="10sp"
+                            android:text="Un '*' significa que el campo es obligatorio"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
 
                         <EditText
                             android:id="@+id/editTextTextPersonName"
@@ -90,7 +99,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10sp"
                             android:ems="10"
-                            android:hint="Nombres Completos"
+                            android:hint=" * Nombres Completos"
                             android:inputType="textPersonName"
                             android:textColor="@color/black"
                             android:textSize="20sp" />
@@ -101,7 +110,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10sp"
                             android:ems="10"
-                            android:hint="Cédula"
+                            android:hint="* Cédula"
                             android:maxLength="10"
                             android:inputType="number"
                             android:textColor="@color/black"
@@ -113,7 +122,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10sp"
                             android:ems="10"
-                            android:hint="Teléfono"
+                            android:hint="* Teléfono"
                             android:maxLength="10"
                             android:inputType="number"
                             android:textColor="@color/black"
@@ -125,7 +134,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10sp"
                             android:ems="10"
-                            android:hint="Dirección"
+                            android:hint="* Dirección"
                             android:inputType="textPersonName"
                             android:textColor="@color/black"
                             android:textSize="20sp" />
@@ -137,9 +146,11 @@
                             android:layout_margin="10sp"
                             android:ems="10"
                             android:maxLength="10"
-                            android:hint="Fecha de Nacimiento"
-                            android:inputType="date"
+                            android:hint="* Fecha de Nacimiento"
+                            android:inputType="number"
+                            android:focusable="false"
                             android:textColor="@color/black"
+
                             android:textSize="20sp" />
 
                         <EditText

@@ -32,7 +32,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -70,14 +73,6 @@ public class Encuesta extends AppCompatActivity {
 
         textView5 = findViewById(R.id.textView5);
         textView22 = findViewById(R.id.textView22);
-
-
-
-
-
-
-
-
 
         grupoS1Preg1 = findViewById(R.id.grupoS1Preg1);
         pSPregunta1 = findViewById(R.id.pSPregunta1);
@@ -164,28 +159,6 @@ public class Encuesta extends AppCompatActivity {
             }
         });
 
-        editTextDate.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // no se requiere implementación
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (validarEdad(s.toString())) {
-                } else {
-                    // el correo electrónico no tiene un formato válido
-                    editTextDate.setError("La fecha de nacimiento no es válida");
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                // no se requiere implementación
-            }
-        });
-
         editTextTextEmailAddress = findViewById(R.id.editTextTextEmailAddress);
         editTextTextEmailAddress.addTextChangedListener(new TextWatcher() {
             @Override
@@ -251,8 +224,18 @@ public class Encuesta extends AppCompatActivity {
         // Formateamos la fecha pero podríamos hacer cualquier otra cosa ;)
         String fecha = String.format(Locale.getDefault(), "%02d-%02d-%02d", ultimoAnio, ultimoMes+1, ultimoDiaDelMes);
 
-        // La ponemos en el editText
-        editTextDate.setText(fecha);
+        try {
+            if (validarEdad(String.valueOf(ultimoAnio)+"-"+String.valueOf(ultimoMes+1)+"-"+String.valueOf(ultimoDiaDelMes))) {
+                // La ponemos en el editText
+                editTextDate.setText(fecha);
+            } else {
+                //Toast.makeText(getApplicationContext(), "El año debe ser menor a 2050", Toast.LENGTH_SHORT).show();
+            }
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 
     private void eventosRadio (){
@@ -309,21 +292,24 @@ public class Encuesta extends AppCompatActivity {
 
     public void enviarEncuesta (View view){
 
+        bandera = false;
+
         params.put("usuario", preferencias.getString("usuario", ""));
 
         datosPersonales();
 
-        if(!bandera){seccion1();};
-
-        if(!bandera){seccion2();};
-
-        if(!bandera){seccion3();};
-
-        if(!bandera){seccion4();};
-
-        if(!bandera){seccion5();};
-
-        if(!bandera){seccion6();};
+        //if(!bandera){seccion1();};
+        seccion1();
+        //if(!bandera){seccion2();};
+        seccion2();
+        //if(!bandera){seccion3();};
+        seccion3();
+        //if(!bandera){seccion4();};
+        seccion4();
+        //if(!bandera){seccion5();};
+        seccion5();
+        //if(!bandera){seccion6();};
+        seccion6();
 
         ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(ConnectivityManager.class);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
@@ -437,12 +423,12 @@ public class Encuesta extends AppCompatActivity {
         
         //editText = findViewById(R.id.editTextTextEmailAddress);
         campo = editTextTextEmailAddress.getText().toString();
-        if (TextUtils.isEmpty(campo)) {
-            editTextTextEmailAddress.setError("Completar este campo");
+        //if (TextUtils.isEmpty(campo)) {
+        //    editTextTextEmailAddress.setError("Completar este campo");
             bandera = true;
-        } else {
+        //} else {
             params.put("correo", campo);
-        }
+        //}
 
         if(bandera){
             validar("Datos Personales");
@@ -484,22 +470,76 @@ public class Encuesta extends AppCompatActivity {
 
     }
 
-    public boolean validarEdad( String edad){
-        int edadN;
-        ultimoAnio = calendario.get(Calendar.YEAR);
-        if(edad.length() < 4){
+    public boolean validarEdad( String fecha) throws ParseException {
 
-        } else {
-            try {
-                edadN = Integer.parseInt(edad.substring(0,4));
-            } catch (Exception e){
-                return false;
-            }
-            if(((ultimoAnio - edadN) <= 130) && (ultimoAnio - edadN) > 1){
-                return true;
-            }
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = sdf.parse(fecha);
+        Calendar calendarFechaIngresada = Calendar.getInstance();
+        calendarFechaIngresada.setTime(date);
+
+        Calendar calendar = Calendar.getInstance();
+
+        if (calendarFechaIngresada.after(calendar)) {
+            Toast.makeText(getApplicationContext(), "La fecha de nacimiento no puede ser posterior a la fecha actual", Toast.LENGTH_SHORT).show();
+            return false;
         }
-        return false;
+
+        int aniosDiferencia = calendar.get(Calendar.YEAR) - calendarFechaIngresada.get(Calendar.YEAR);
+
+        // Compara los meses y días para ajustar la diferencia de años si aún no se ha cumplido el aniversario
+        if (calendar.get(Calendar.MONTH) < calendarFechaIngresada.get(Calendar.MONTH)
+                || (calendar.get(Calendar.MONTH) == calendarFechaIngresada.get(Calendar.MONTH)
+                && calendar.get(Calendar.DAY_OF_MONTH) < calendarFechaIngresada.get(Calendar.DAY_OF_MONTH))) {
+            aniosDiferencia--;
+        }
+
+        //Toast.makeText(getApplicationContext(), aniosDiferencia, Toast.LENGTH_SHORT).show();
+
+
+        if(aniosDiferencia > 130){
+            Toast.makeText(getApplicationContext(), "La fecha de nacimiento no es válida", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
+/*
+        int añoFechaIngresada = calendarFechaIngresada.get(Calendar.YEAR);
+        int diferenciaAnios = calendario.get(Calendar.YEAR) - añoFechaIngresada;
+
+        if (diferenciaAnios >= 1 && diferenciaAnios <= 130) {
+            return true;
+        } else {
+            return false;
+        }*/
+    }
+
+    public boolean validarEdadE( String fecha) throws ParseException {
+        int edadN = 0;
+
+        try {
+            edadN = Integer.parseInt(fecha.substring(0,4));
+        } catch (Exception e){
+            return false;
+        }
+
+        if(((calendario.get(Calendar.YEAR) - edadN) <= 130) && (calendario.get(Calendar.YEAR) - edadN) > 1){
+            return true;
+        } else {
+            return false;
+        }
+/*
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = sdf.parse(fecha);
+        Calendar calendarFechaIngresada = Calendar.getInstance();
+        calendarFechaIngresada.setTime(date);
+        int añoFechaIngresada = calendarFechaIngresada.get(Calendar.YEAR);
+        int diferenciaAnios = calendario.get(Calendar.YEAR) - añoFechaIngresada;
+
+        if (diferenciaAnios >= 1 && diferenciaAnios <= 130) {
+            return true;
+        } else {
+            return false;
+        }*/
     }
 
     private void seccion6() {
