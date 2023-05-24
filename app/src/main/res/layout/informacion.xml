@@ -25,13 +25,13 @@
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
-                android:layout_height="153dp"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/img_informacion" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="846dp"
                 android:layout_marginBottom="4dp"
                 android:background="@drawable/text_bord"
                 android:padding="20sp">
@@ -41,13 +41,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="116dp"
+                    android:layout_marginTop="40dp"
                     android:layout_marginEnd="115dp"
                     android:text="SE SURVEY"
                     android:textColor="@color/colorverde"
                     android:textSize="30sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.48"
+                    app:layout_constraintHorizontal_bias="0.458"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

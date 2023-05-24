@@ -21,7 +21,6 @@
             <!-- Encabezado -->
 
 
-
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout4"
                     android:layout_width="match_parent"

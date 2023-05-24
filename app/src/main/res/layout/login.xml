@@ -8,86 +8,95 @@
     android:backgroundTint="@color/verde4"
     tools:context=".Login">
 
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="338dp"
-        android:layout_height="193dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginEnd="29dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.349"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/img_login" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="387dp"
-        android:layout_height="534dp"
-        android:background="@drawable/text_bord"
-        android:elevation="30dp"
-        android:orientation="vertical"
-        android:padding="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="248dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="142dp"
-            android:fontFamily="@font/quicksand_bold"
-            android:text="Comencemos!"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@color/colorverde"
-            android:textStyle="bold" />
+            android:orientation="vertical" >
 
-        <EditText
-            android:id="@+id/usuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="40dp"
-            android:ems="10"
-            android:fontFamily="@font/quicksand_bold"
-            android:hint="Correo"
-            android:inputType="textEmailAddress"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/black" />
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="match_parent"
+                android:layout_height="272dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="29dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="2dp"
+                app:srcCompat="@drawable/img_login" />
 
-        <EditText
-            android:id="@+id/contrasenia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="40dp"
-            android:ems="10"
-            android:fontFamily="@font/quicksand_bold"
-            android:hint="Contraseña"
-            android:inputType="textPassword"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/black" />
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:background="@drawable/text_bord"
+                android:elevation="30dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="50dp"
 
-        <Button
-            android:id="@+id/btnIngresar"
-            android:layout_width="240dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="68dp"
-            android:layout_marginEnd="151dp"
-            android:background="@drawable/button_border"
-            android:backgroundTint="@color/colorverde"
-            android:elevation="30dp"
-            android:fontFamily="@font/quicksand_bold"
-            android:text="Acceder"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#FFFFFF" />
+                android:paddingRight="20dp">
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:layout_marginStart="73dp"
+                    android:layout_marginEnd="40dp"
+                    android:text="Comencemos!"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="@color/colorverde"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/usuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:ems="10"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:hint="Correo"
+                    android:inputType="textEmailAddress"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/contrasenia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="40dp"
+                    android:ems="10"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/btnIngresar"
+                    android:layout_width="180dp"
+                    android:layout_height="66dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginStart="95dp"
+                    android:background="@drawable/button_border"
+                    android:backgroundTint="@color/colorverde"
+                    android:elevation="30dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:gravity="center"
+                    android:text="Acceder"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

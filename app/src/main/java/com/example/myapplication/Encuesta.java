@@ -685,7 +685,7 @@ public class Encuesta extends AppCompatActivity {
         }
 
     }
-
+    
     private void seccion4() {
         RadioButton auxRadBut;
 
