@@ -10,8 +10,8 @@
 
     <RelativeLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="410dp"
-        android:layout_height="469dp"
+        android:layout_width="413dp"
+        android:layout_height="463dp"
         android:background="@drawable/text_bord_inicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
