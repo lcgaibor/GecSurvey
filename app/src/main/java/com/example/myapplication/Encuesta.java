@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -17,12 +16,13 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,10 +66,14 @@ public class Encuesta extends AppCompatActivity {
 
     TextView textView5, textView22, textViewGlobal;
 
+    ScrollView scrollT;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.encuesta);
+
+        scrollT = findViewById(R.id.scrollT);
 
         textView5 = findViewById(R.id.textView5);
         textView22 = findViewById(R.id.textView22);
@@ -292,24 +296,44 @@ public class Encuesta extends AppCompatActivity {
 
     public void enviarEncuesta (View view){
 
+        borrarErrorMensages(scrollT);
+
+
         bandera = false;
+
+        boolean b1,b2,b3,b4,b5,b6,b7;
 
         params.put("usuario", preferencias.getString("usuario", ""));
 
         datosPersonales();
-
+        b1 = bandera;
+        bandera = false;
         //if(!bandera){seccion1();};
         seccion1();
+        b2 = bandera;
+        bandera = false;
         //if(!bandera){seccion2();};
         seccion2();
+        b3 = bandera;
+        bandera = false;
         //if(!bandera){seccion3();};
         seccion3();
+        b4 = bandera;
+        bandera = false;
         //if(!bandera){seccion4();};
         seccion4();
+        b5 = bandera;
+        bandera = false;
         //if(!bandera){seccion5();};
         seccion5();
+        b6 = bandera;
+        bandera = false;
         //if(!bandera){seccion6();};
         seccion6();
+        b7 = bandera;
+        //bandera = false;
+
+        bandera = b1 || b2 || b3 || b4 || b5 || b6 || b7;
 
         ConnectivityManager cm = (ConnectivityManager) getApplicationContext().getSystemService(ConnectivityManager.class);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
@@ -360,7 +384,7 @@ public class Encuesta extends AppCompatActivity {
     }
 
     public void validar(String valor){
-        Toast.makeText(getApplicationContext(),"Faltan campos por llenar en " + valor, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Faltan campos por validar en " + valor, Toast.LENGTH_SHORT).show();
         params.clear();
         //bandera = true;
     }
@@ -375,10 +399,13 @@ public class Encuesta extends AppCompatActivity {
 
         EditText editText = findViewById(R.id.editTextTextPersonName);
         String campo = editText.getText().toString();
-        if (TextUtils.isEmpty(campo)) {
+        if (TextUtils.isEmpty(campo) ) {
             editText.setError("Completar este campo");
             bandera = true;
-        } else {
+        } else if(!campo.toString().matches("[\\p{L}a-zA-Z ]+")) {
+            editText.setError("Solo se permiten caracteres del alfabeto");
+            bandera = true;
+        }else {
             params.put("nombre", campo);
         }
         
@@ -425,7 +452,7 @@ public class Encuesta extends AppCompatActivity {
         campo = editTextTextEmailAddress.getText().toString();
         //if (TextUtils.isEmpty(campo)) {
         //    editTextTextEmailAddress.setError("Completar este campo");
-            bandera = true;
+            //bandera = true;
         //} else {
             params.put("correo", campo);
         //}
@@ -1180,5 +1207,24 @@ public class Encuesta extends AppCompatActivity {
             validar();
         }
 
+    }
+
+    private void borrarErrorMensages(ViewGroup viewGroup) {
+        for (int i = 0; i < viewGroup.getChildCount(); i++) {
+            View view = viewGroup.getChildAt(i);
+
+            if (view instanceof EditText) {
+                EditText editText = (EditText) view;
+                editText.setError(null);
+            } else if (view instanceof ViewGroup) {
+                borrarErrorMensages((ViewGroup) view);
+            }
+            if (view instanceof TextView) {
+                TextView editText = (TextView) view;
+                editText.setError(null);
+            } else if (view instanceof ViewGroup) {
+                borrarErrorMensages((ViewGroup) view);
+            }
+        }
     }
 }
