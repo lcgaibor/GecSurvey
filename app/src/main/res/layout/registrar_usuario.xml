@@ -18,7 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imageView8"
@@ -27,7 +27,7 @@
                 app:srcCompat="@drawable/img_registrar" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="413dp"
+                android:layout_width="wrap_content"
                 android:layout_height="770dp"
                 android:background="@drawable/text_bord"
                 android:elevation="30dp"

@@ -54,72 +54,21 @@
 
                 <TextView
                     android:id="@+id/textView13"
-                    android:layout_width="363dp"
-                    android:layout_height="149dp"
+                    android:layout_width="329dp"
+                    android:layout_height="552dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:justificationMode="inter_word"
                     android:lineSpacingMultiplier="1.2"
                     android:padding="10sp"
-                    android:text="SE Survey es una aplicación diseñada para recopilar información de la comunidad de Luz de América sobre temas relacionados con la gestión de emergencias comunitarias."
+                    android:text="SE Survey es una aplicación diseñada para recopilar información de la comunidad de Luz de América sobre temas relacionados con la gestión de emergencias comunitarias.  A través de una encuesta cuidadosamente diseñada, recopilamos datos sobre robos, accidentes de tránsito, actividades sospechosas u otros servicios de emergencia. Con los resultados obtenidos, podemos analizar las necesidades de la comunidad y desarrollar herramientas que ayuden a mejorar la seguridad y el bienestar de la comunidad. Además, estamos comprometidos en utilizar los resultados de la encuesta para crear una aplicación móvil llamada Seguridad Espe (SE)."
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="normal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-                <TextView
-                    android:id="@+id/textView17"
-                    android:layout_width="356dp"
-                    android:layout_height="152dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:justificationMode="inter_word"
-                    android:lineSpacingMultiplier="1.2"
-                    android:padding="10sp"
-                    android:text="A través de una encuesta cuidadosamente diseñada, recopilamos datos sobre robos, accidentes de tránsito, actividades sospechosas u otros servicios de emergencia."
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="normal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
-
-                <TextView
-                    android:id="@+id/textView31"
-                    android:layout_width="367dp"
-                    android:layout_height="160dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:justificationMode="inter_word"
-                    android:lineSpacingMultiplier="1.2"
-                    android:padding="10sp"
-                    android:text="Con los resultados obtenidos, podemos analizar las necesidades de la comunidad y desarrollar herramientas que ayuden a mejorar la seguridad y el bienestar de la comunidad."
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="normal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-                <TextView
-                    android:id="@+id/textView44"
-                    android:layout_width="359dp"
-                    android:layout_height="140dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:justificationMode="inter_word"
-                    android:lineSpacingMultiplier="1.2"
-                    android:padding="10sp"
-                    android:text="Además, estamos comprometidos en utilizar los resultados de la encuesta para crear una aplicación móvil llamada Seguridad Espe (SE)."
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="normal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -572,9 +572,10 @@ public class Encuesta extends AppCompatActivity {
     private void seccion6() {
         RadioButton auxRadBut;
 
+        textViewGlobal = findViewById(R.id.textView55);
+
         int checkedRadioButtonId = grupoS6Preg1.getCheckedRadioButtonId();
         if (checkedRadioButtonId == -1) {
-            textViewGlobal = findViewById(R.id.textView55);
             textViewGlobal.setError("Debe completar esta pregunta");
             bandera = true;
             //validar(); 
@@ -582,7 +583,6 @@ public class Encuesta extends AppCompatActivity {
         } else {
             auxRadBut = findViewById(checkedRadioButtonId);
             params.put("P1_S6", auxRadBut.getText().toString());
-
             if( checkedRadioButtonId == R.id.radioButton83){
                 cargarpSPregunta1S6();
             }
