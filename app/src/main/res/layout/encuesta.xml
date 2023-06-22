@@ -561,7 +561,7 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
-                    <!-- Para no -->
+                    <!-- Para no
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/pNPregunta1"
@@ -600,7 +600,7 @@
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
-
+ -->
                     <View
                         android:id="@+id/view9"
                         android:layout_width="match_parent"

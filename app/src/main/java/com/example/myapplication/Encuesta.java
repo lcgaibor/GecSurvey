@@ -80,7 +80,7 @@ public class Encuesta extends AppCompatActivity {
 
         grupoS1Preg1 = findViewById(R.id.grupoS1Preg1);
         pSPregunta1 = findViewById(R.id.pSPregunta1);
-        pNPregunta1 = findViewById(R.id.pNPregunta1);
+        //pNPregunta1 = findViewById(R.id.pNPregunta1);
 
         grupoS1Preg2 = findViewById(R.id.grupoS1Preg2);
 
@@ -250,11 +250,11 @@ public class Encuesta extends AppCompatActivity {
                 if (checkedId == R.id.radioButton) {
                     // Muestra el componente si el primer botón de radio está seleccionado
                     pSPregunta1.setVisibility(View.VISIBLE);
-                    pNPregunta1.setVisibility(View.GONE);
+                    //pNPregunta1.setVisibility(View.GONE);
                 } else if (checkedId == R.id.radioButton2) {
                     // Oculta el componente si el segundo botón de radio está seleccionado
                     pSPregunta1.setVisibility(View.GONE);
-                    pNPregunta1.setVisibility(View.VISIBLE);
+                    //pNPregunta1.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -1076,7 +1076,7 @@ public class Encuesta extends AppCompatActivity {
                 case R.id.radioButton2:
                     auxRadBut = findViewById(R.id.radioButton2);
                     params.put("P1_S1", auxRadBut.getText().toString());
-                    cargarpNPregunta1();
+                    //cargarpNPregunta1();
                     break;
                 default:
                     Toast.makeText(this, "No ha seleccionado en la 1", Toast.LENGTH_SHORT).show();
@@ -1101,7 +1101,7 @@ public class Encuesta extends AppCompatActivity {
     }
 
     private void cargarpNPregunta1() {
-        EditText editText = findViewById(R.id.editTextTextPersonName5);
+        /*EditText editText = findViewById(R.id.editTextTextPersonName5);
 
         if (TextUtils.isEmpty(editText.getText().toString())) {
             editText.setError("Debes completar esta pregunta");
@@ -1114,7 +1114,7 @@ public class Encuesta extends AppCompatActivity {
 
         if (bandera){
             validar();
-        }
+        }*/
 
     }
 
