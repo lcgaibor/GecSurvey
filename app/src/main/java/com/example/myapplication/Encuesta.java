@@ -298,6 +298,9 @@ public class Encuesta extends AppCompatActivity {
 
         borrarErrorMensages(scrollT);
 
+        String fecha = String.format(Locale.getDefault(), "%02d-%02d-%02d", calendario.get(Calendar.YEAR), calendario.get(Calendar.MONTH)+1, calendario.get(Calendar.DAY_OF_MONTH));
+
+        params.put("fechaEnc", fecha);
 
         bandera = false;
 
