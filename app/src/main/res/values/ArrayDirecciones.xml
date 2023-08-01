@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opcionesDireciones">
+        <item>...</item>
+        <item>
+            Calle Cristóbal Colon, Liberación Popular
+        </item>
+        <item>
+            km 16, vía Quevedo
+        </item>
+        <item>
+            km 19, vía Quevedo
+        </item>
+        <item>
+            Calle 20 de agosto
+        </item>
+        <item>
+            Huerto Familiar
+        </item>
+        <item>
+            Las Palmas
+        </item>
+        <item>
+            Vía Puerto Limon
+        </item>
+        <item>
+            29 de Junio
+        </item>
+        <item>
+            Barrio Los Sauces
+        </item>
+        <item>
+            Barrio Bryan
+        </item>
+        <item>
+            Barrio San Luis
+        </item>
+        <item>
+            Barrio Santa Rosa
+        </item>
+        <item>
+            Calle Manuela Cañizares
+        </item>
+        <item>
+            Calle Atahualpa
+        </item>
+        <item>
+            Calle 13 de Abril
+        </item>
+        <item>
+            Calle Juan Montalvo
+        </item>
+        <item>
+            Calle Eugenio Espejo
+        </item>
+        <item>
+            Calle 12 de Octubre
+        </item>
+        <item>
+            Calle José Peralta
+        </item>
+        <item>
+            Calle 24 de mayo
+        </item>
+        <item>
+            Calle Eloy Alfaro
+        </item>
+        <item>
+            Calle 10 de agosto
+        </item>
+        <item>
+            19 de Noviembre
+        </item>
+        <item>
+            30 de Noviembre
+        </item>
+        <item>
+            Bellavista
+        </item>
+        <item>
+            Carlos Julio Arosemena
+        </item>
+        <item>
+            Cóngoma Chico
+        </item>
+        <item>
+            Cóngoma de Medio
+        </item>
+        <item>
+            Cóngoma Grande
+        </item>
+        <item>
+            Com. Tsáchila Chiguilpe
+        </item>
+        <item>
+            Cooperativa Luz de America
+        </item>
+        <item>
+            El Baba
+        </item>
+        <item>
+            El Mirador del Baba
+        </item>
+        <item>
+            HACIENDA "CRISTINA"
+        </item>
+        <item>
+            HACIENDA "PRIMAVERA"
+        </item>
+        <item>
+            La Bacalera
+        </item>
+        <item>
+            La Susanita
+        </item>
+        <item>
+            Laguna azul
+        </item>
+        <item>
+            Las Mercedes
+        </item>
+        <item>
+            Luz de America
+        </item>
+        <item>
+            Manantiales del Candelo
+        </item>
+        <item>
+            Policía Dos
+        </item>
+        <item>
+            Policía Uno
+        </item>
+        <item>
+            San Andres 1
+        </item>
+        <item>
+            San Andres 2
+        </item>
+        <item>
+            San Francisco
+        </item>
+        <item>
+            San Vicente de Paúl
+        </item>
+        <item>
+            San Vicente del Nila
+        </item>
+    </string-array>
+</resources>

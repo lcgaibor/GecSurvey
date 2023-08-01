@@ -17,12 +17,14 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -68,6 +70,10 @@ public class Encuesta extends AppCompatActivity {
 
     ScrollView scrollT;
 
+    private Spinner direccion_spinner;
+
+    TextView txtDir;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +86,7 @@ public class Encuesta extends AppCompatActivity {
 
         grupoS1Preg1 = findViewById(R.id.grupoS1Preg1);
         pSPregunta1 = findViewById(R.id.pSPregunta1);
-        //pNPregunta1 = findViewById(R.id.pNPregunta1);
+        pNPregunta1 = findViewById(R.id.pNPregunta1);
 
         grupoS1Preg2 = findViewById(R.id.grupoS1Preg2);
 
@@ -113,6 +119,13 @@ public class Encuesta extends AppCompatActivity {
 
         grupoS6Preg1 = findViewById(R.id.grupoS6Preg1);
         pSPregunta1S6 = findViewById(R.id.pSPregunta1S6);
+
+        direccion_spinner = findViewById(R.id.direccion_spinner);
+        direccion_spinner.setPrompt("Direcciones");
+
+        txtDir = findViewById(R.id.txtDir);
+
+        llenarSpinnerDireccion();
 
         eventosRadio();
 
@@ -211,6 +224,15 @@ public class Encuesta extends AppCompatActivity {
         });
     }
 
+    private void llenarSpinnerDireccion(){
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.opcionesDireciones, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.preference_category);
+
+        direccion_spinner.setAdapter(adapter);
+    }
+
     // Crear un listener del datepicker;
     private DatePickerDialog.OnDateSetListener listenerDeDatePicker = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -243,6 +265,7 @@ public class Encuesta extends AppCompatActivity {
     }
 
     private void eventosRadio (){
+        pNPregunta1.setVisibility(View.GONE);
         grupoS1Preg1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
@@ -430,16 +453,25 @@ public class Encuesta extends AppCompatActivity {
         } else {
             params.put("telefono", campo);
         }
-        
 
-        editText = findViewById(R.id.editTextTextPersonName2);
+        int pos = direccion_spinner.getSelectedItemPosition();
+        campo = direccion_spinner.getSelectedItem().toString();
+        if (pos==0) {
+            txtDir.setError("Completar este campo");
+            bandera = true;
+        } else {
+            params.put("direccion", campo);
+        }
+
+
+        /*editText = findViewById(R.id.editTextTextPersonName2);
         campo = editText.getText().toString();
         if (TextUtils.isEmpty(campo)) {
             editText.setError("Completar este campo");
             bandera = true;
         } else {
             params.put("direccion", campo);
-        }
+        }*/
         
 
         editText = findViewById(R.id.editTextDate);
@@ -1076,7 +1108,7 @@ public class Encuesta extends AppCompatActivity {
                 case R.id.radioButton2:
                     auxRadBut = findViewById(R.id.radioButton2);
                     params.put("P1_S1", auxRadBut.getText().toString());
-                    //cargarpNPregunta1();
+                    cargarpNPregunta1();
                     break;
                 default:
                     Toast.makeText(this, "No ha seleccionado en la 1", Toast.LENGTH_SHORT).show();
@@ -1115,6 +1147,8 @@ public class Encuesta extends AppCompatActivity {
         if (bandera){
             validar();
         }*/
+
+        params.put("P1_S1_P1_N","Constante");
 
     }
 
